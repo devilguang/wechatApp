@@ -1,0 +1,42 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#091459",
+    "navigationBarTitleText": "有人智库",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#666",
+    "backgroundColor": "#fff",
+    "selectedColor": "#3982e8",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "iconPath": "images/img-home_home.png",
+            "selectedIconPath": "images/img-home_homeh.png",
+            "text": "首页"
+        },
+        {
+            "pagePath": "pages/recommend/recommend",
+            "iconPath": "images/img-home_recommend.png",
+            "selectedIconPath": "images/img-home_recommendh.png",
+            "text": "推荐"
+        },
+        {
+            "pagePath": "pages/commenting/commenting",
+            "iconPath": "images/img-home_commenting.png",
+            "selectedIconPath": "images/img-home_commentingh.png",
+            "text": "会议"
+        },
+        {
+            "pagePath": "pages/myself/myself",
+            "iconPath": "images/img-home_myself.png",
+            "selectedIconPath": "images/img-home_myselfh.png",
+            "text": "我的"
+        }
+    ]
+}
+}

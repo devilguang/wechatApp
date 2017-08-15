@@ -1,0 +1,39 @@
+/**index.wxss**/
+.container{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* y-banner */
+.y-banner{
+    width: 100%;
+    height: 286rpx;
+}
+.y-banner image{
+    width: 100%;
+    height: 100%;
+}
+
+/* y-search */
+.y-search{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: -220rpx;
+}
+.y-search__title{
+    line-height: 78rpx;
+    font-size: 36rpx;
+    color: #fff;
+}
+
+.y-search__input--box{
+    width: 90%;
+    height: 76rpx;
+    margin-top: 40rpx;
+    border-radius: 38rpx;
+    background-color: #fff;
+}

@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="y-banner">
+        <image src="../../images/img-home_bg.jpg"></image>
+    </view>
+    <view class="y-search">
+        <text class="y-search__title">政产学研技术“红娘”</text>
+        <view class="y-search__input--box">
+        <text>搜索</text>
+        </view>
+        <input class="y-search__input--box" />
+    </view>
+
+</view>
