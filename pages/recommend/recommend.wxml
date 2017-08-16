@@ -1,0 +1,36 @@
+<!--pages/recommend/recommend.wxml-->
+<import src="../../templates/TListItem.wxml" />
+
+<view class="container">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar__wrap">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                </view>
+            </view>
+            <view class="weui-tab__panel">
+                <!-- 需求 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class="list--center">
+                        <block wx:for="{{demandList}}">
+                            <template is="listItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                </view>
+                <!-- 技术 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="list--center">
+                        <block wx:for="{{technologyList}}">
+                            <template is="listItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

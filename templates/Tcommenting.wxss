@@ -1,0 +1,70 @@
+/* commenting-item */
+
+.y-commenting__item {
+    display: flex;
+    flex-flow: row;
+    padding: 20rpx 20rpx 14rpx;
+    font-size: 24rpx;
+}
+
+.y-commenting__item + .y-commenting__item::after {
+    content: "";
+    position: absolute;
+    left: 2.65%;
+    display: block;
+    width: 94.667%;
+    height: 1rpx;
+    margin-top: -20rpx;
+    background-color: #f0eff5;
+}
+
+.y-commenting__img-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 240rpx;
+    margin-right: 20rpx;
+    color: #555;
+}
+
+.y-commenting__img-box image {
+    width: 110rpx;
+    height: 110rpx;
+    border-radius: 50%;
+}
+
+.y-commenting__img-box text {
+    display: inline-block;
+    line-height: 36rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.y-commenting__unit {
+    color: #333;
+}
+
+.y-commenting__icon {
+    position: relative;
+    top: 6rpx;
+    width: 25rpx;
+    height: 28rpx;
+    margin-right: 20rpx;
+}
+
+.y-commenting__info {
+    flex: 1;
+    color: #999;
+    line-height: 50rpx;
+}
+
+.y-commenting__type {
+    color: #3982e8;
+    font-size: 30rpx;
+}
+
+.y-commenting____duration {
+    font-size: 20rpx;
+}

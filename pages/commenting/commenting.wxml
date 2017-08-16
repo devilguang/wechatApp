@@ -1,0 +1,52 @@
+<!--pages/commenting/commenting.wxml-->
+<import src="../../templates/Tcommenting.wxml" />
+
+<view class="container">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar__wrap">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+            </view>
+            <view class="weui-tab__panel">
+                <!-- 待确认 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class="list">
+                        待确认列表
+                    </view>
+                </view>
+                <!-- 已确认 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="y-title">
+                        <text>今日行程</text>
+                    </view>
+                    <view class="list">
+                        <block wx:for="{{commentingList}}">
+                            <template is="commentingItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                    <view class="y-title">
+                        <text>之后行程</text>
+                    </view>
+                    <view class="list">
+                        <block wx:for="{{commentingList}}">
+                            <template is="commentingItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                </view>
+                <!-- 已结束 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="list">
+                        已结束列表
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

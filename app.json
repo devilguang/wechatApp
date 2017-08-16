@@ -1,10 +1,14 @@
 {
   "pages":[
-    "pages/index/index"
+    "pages/commenting/commenting",
+    "pages/myself/myself",
+    "pages/index/index",
+    "pages/recommend/recommend"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#091459",
+    "navigationBarBackgroundColor": "#3982e8",
     "navigationBarTitleText": "有人智库",
     "navigationBarTextStyle":"white"
   },

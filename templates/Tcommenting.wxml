@@ -1,0 +1,17 @@
+<template name="commentingItem">
+    <view class="y-commenting__item">
+        <view class="y-commenting__img-box">
+            <image src="{{img}}"></image>\n
+            <text class="y-commenting__unit">{{unit}}</text>
+            <text>{{contactName}} {{contactPostion}}</text>
+        </view>
+        <view class="y-commenting__info">
+            <text class="y-commenting__type" wx:if="{{type===0}}">电话约谈\n</text>
+            <text class="y-commenting__type" wx:else>线下约谈\n</text>
+            <image src="../../images/icon-home_4.png" class="y-commenting__icon"></image><text>{{phone}}\n</text>
+            <image src="../../images/icon-home_5.png" class="y-commenting__icon"></image><text>{{time}} </text><text class="y-commenting__duration">（{{dateTime}}）\n</text>
+            <image src="../../images/icon-home_7.png" wx:if="{{type===1}}" class="y-commenting__icon"></image><text wx:if="{{type===1}}">{{address}}\n</text>
+            <image src="../../images/icon-home_6.png" class="y-commenting__icon"></image><text>获取报酬{{money}}元</text>
+        </view>
+    </view>
+</template>
