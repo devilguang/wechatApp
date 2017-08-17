@@ -1,4 +1,8 @@
 /* pages/recommend/recommend.wxss */
+page {
+    background-color: #fff;
+}
+
 .page__bd,
 .weui-tab,
 .weui-tab__panel{

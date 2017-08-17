@@ -17,8 +17,50 @@
             <view class="weui-tab__panel">
                 <!-- 待确认 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                    <view class="list">
-                        待确认列表
+                    <view class="y-title y-title--commenting">
+                        <view>
+                            <image class="y-title__icon" src="../../images/icon-commenting_1.png"></image><text>我感兴趣的</text>
+                        </view>
+                    </view>
+                    <view class="y-list">
+                        <view class="y-unconfirmed__item" wx:for="{{unconfirmedList}}" wx:key="{{item.id}}">
+                            <view class="y-unconfirmed__content">
+                                <text class="y-unconfirmed__title">{{item.title}}</text>
+                                <text class="y-unconfirmed__brief">{{item.brief}}</text>
+                                <text class="y-unconfirmed__remark">{{item.date}}发送</text>
+                            </view>
+                            <view class="y-unconfirmed__notice">
+                                系统正在安排约会\n请耐心等待
+                            </view>
+                        </view>
+                    </view>
+                    <view class="y-title y-title--commenting">
+                        <view>
+                            <image class="y-title__icon" src="../../images/icon-commenting_2.png"></image><text>对我感兴趣的</text>
+                        </view>
+                    </view>
+                    <view class="y-list">
+                        <view class="y-unconfirmed__item" wx:for="{{unconfirmedCompanyList}}" wx:key="{{item.id}}">
+                            <view class="y-unconfirmed__content">
+                                <view class="y-unconfirmed__company">
+                                    <view class="y-unconfirmed__img">
+                                        <image src="{{item.img}}" mode="aspectFit"></image>
+                                    </view>
+                                    <view class="y-unconfirmed__info">
+                                        <text class="y-unconfirmed__title">{{item.unit}}</text>\n
+                                        <text class="y-unconfirmed__contacts">{{item.contactName}} {{item.contactPostion}}</text>
+                                    </view>
+                                </view>
+                                <text class="y-unconfirmed__brief">留言：{{item.leaveword}}</text>
+                            </view>
+                            <view class="y-unconfirmed__notice" wx:if="{{item.accept}}">
+                                您已接受对方邀请\n系统正在安排约会\n请耐心等待
+                            </view>
+                            <view class="y-unconfirmed__notice" wx:else>
+                                <button class="weui-btn mini-btn" type="warn" size="mini">拒绝</button>
+                                <button class="weui-btn mini-btn" type="primary" size="mini">接受</button>
+                            </view>
+                        </view>
                     </view>
                 </view>
                 <!-- 已确认 -->
@@ -26,24 +68,32 @@
                     <view class="y-title">
                         <text>今日行程</text>
                     </view>
-                    <view class="list">
-                        <block wx:for="{{commentingList}}">
+                    <view class="y-list">
+                        <block wx:for="{{commentingList}}" wx:key="{{item.id}}">
                             <template is="commentingItem" data="{{...item}}"></template>
                         </block>
                     </view>
                     <view class="y-title">
                         <text>之后行程</text>
                     </view>
-                    <view class="list">
-                        <block wx:for="{{commentingList}}">
+                    <view class="y-list">
+                        <block wx:for="{{commentingList}}" wx:key="{{item.id}}">
                             <template is="commentingItem" data="{{...item}}"></template>
                         </block>
                     </view>
                 </view>
                 <!-- 已结束 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
-                    <view class="list">
-                        已结束列表
+                    <view class="y-list">
+                        <view class="y-title y-commenting__filtrate-wrap">
+                            <view class="y-commenting__filtrate">时间</view>
+                            <view class="y-commenting__filtrate">金额</view>
+                        </view>
+                        <view class="y-list">
+                            <block wx:for="{{commentedList}}" wx:key="{{item.id}}">
+                                <template is="commentedItem" data="{{...item}}"></template>
+                            </block>
+                        </view>
                     </view>
                 </view>
             </view>

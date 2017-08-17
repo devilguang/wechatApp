@@ -11,8 +11,43 @@ Page({
         activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
+        unconfirmedList: [
+            {
+                id: '1',
+                title: '微通道换热器应用于制冷系统（干式干式',
+                brief: '提高蒸发温度（2度以上）机组能效4.85以上，占用空间大幅缩小',
+                date: '2017-06-28 12:30'
+            },
+            {
+                id: '2',
+                title: '微通道换热器应用于制冷系统（干式干式',
+                brief: '提高蒸发温度（2度以上）机组能效4.85以上，占用空间大幅缩小占用空间大幅缩小占用空间大幅缩小占用空间大幅缩小占用空间大幅缩小占用空间大幅缩小',
+                date: '2017-06-28 12:30'
+            }
+        ],
+        unconfirmedCompanyList: [
+            {
+                id: '1',
+                img: '../../images/img-home_1.png',
+                unit: '武汉麦达电子武汉麦达电子武汉麦达电子武汉麦达电子武汉麦达电子',
+                contactName: '周小伟',
+                contactPostion: '人事经理',
+                accept: true,
+                leaveword: '对您的技术“可靠可坐的婴儿椅”很感兴趣，希望跟你电话约谈。'
+            },
+            {
+                id: '1',
+                img: '../../images/img-home_1.png',
+                unit: '武汉麦达电子',
+                contactName: '周小伟',
+                contactPostion: '人事经理人事经理人事经理人事经理',
+                accept: null,
+                leaveword: '对您的技术“可靠可坐的婴儿椅”很感兴趣，希望跟你电话约谈。'
+            }
+        ],
         commentingList: [
             {
+                id: '1',
                 img: '../../images/img-home_1.png',
                 unit: '武汉麦达电子',
                 contactName: '周小伟',
@@ -24,6 +59,7 @@ Page({
                 money: 500
             },
             {
+                id: '2',
                 img: '../../images/img-home_1.png',
                 unit: '武汉麦达电子',
                 contactName: '周小伟',
@@ -34,6 +70,35 @@ Page({
                 dateTime: '30分钟',
                 address: '武汉市洪山区光谷天地c区星巴克',
                 money: 500
+            }
+        ],
+        commentedList: [
+            {
+                id: '1',
+                img: '../../images/img-home_1.png',
+                unit: '武汉麦达电子',
+                contactName: '周小伟',
+                contactPostion: '人事经理',
+                "type": 0,
+                phone: '15454545454',
+                time: '8月31日 星期四 12:30',
+                dateTime: '30分钟',
+                money: 500,
+                evaluate: true
+            },
+            {
+                id: '2',
+                img: '../../images/img-home_1.png',
+                unit: '武汉麦达电子',
+                contactName: '周小伟',
+                contactPostion: '人事经理',
+                "type": 1,
+                phone: '15454545454',
+                time: '8月31日 星期四 12:30',
+                dateTime: '30分钟',
+                address: '武汉市洪山区光谷天地c区星巴克',
+                money: 500,
+                evaluate: false
             }
         ]
     },

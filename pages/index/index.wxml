@@ -27,7 +27,7 @@
                 <view class="weui-cell__ft weui-cell__ft_in-access">更多</view>
             </navigator>
         </view>
-            <template is="commentingItem" data="{{...commenting}}"></template>
+            <template is="homeCommenting" data="{{...commenting}}"></template>
     </view>
     <!-- 政策资讯/智库tab -->
     <view class="page__bd">

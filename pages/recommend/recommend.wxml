@@ -16,16 +16,16 @@
             <view class="weui-tab__panel">
                 <!-- 需求 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                    <view class="list--center">
-                        <block wx:for="{{demandList}}">
+                    <view class="y-list--center">
+                        <block wx:for="{{demandList}}" wx:key="{{item.id}}">
                             <template is="listItem" data="{{...item}}"></template>
                         </block>
                     </view>
                 </view>
                 <!-- 技术 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                    <view class="list--center">
-                        <block wx:for="{{technologyList}}">
+                    <view class="y-list--center">
+                        <block wx:for="{{technologyList}}" wx:key="{{item.id}}">
                             <template is="listItem" data="{{...item}}"></template>
                         </block>
                     </view>

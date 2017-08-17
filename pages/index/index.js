@@ -9,7 +9,7 @@ Page({
             {
                 imgurl: '../../images/icon-home_1.png',
                 text: '找专家',
-                path: '/pages/index/index'
+                path: '/pages/professor/professor'
             },
             {
                 imgurl: '../../images/icon-home_2.png',
@@ -70,10 +70,6 @@ Page({
         // 预留点击事件处理
         console.log('跳转到搜索页面')
     },
-    onLoad: function () {
-        var that = this;
-
-    },
     tabClick: function (e) {
         this.setData({
             sliderOffset: e.currentTarget.offsetLeft,
@@ -81,8 +77,23 @@ Page({
         });
     },
     onLoad: function () {
-        console.log('onLoad')
         var that = this
+        // 判断是否登录
+        try {
+            var value = wx.getStorageSync('key')
+            if (value) {
+                // Do something with return value
+            } else {
+                wx.redirectTo({
+                    url: '/pages/login/login'
+                })
+            }
+        } catch (e) {
+            // Do something when catch error
+            wx.redirectTo({
+                url: '/notice/msg/msg_fail'
+            })
+        }
         // //调用应用实例的方法获取全局数据
         // app.getUserInfo(function (userInfo) {
         //     //更新数据

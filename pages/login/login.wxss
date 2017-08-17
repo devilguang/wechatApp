@@ -1,0 +1,51 @@
+/* pages/login/login.wxss */
+
+page {
+    background-color: #fff;
+    font-size: 24rpx;
+}
+
+.page__bd {
+    width: 78%;
+    margin: 62rpx auto;
+}
+
+.weui-navbar {
+    border-bottom: 0;
+    font-size: 34rpx;
+    
+}
+.weui-navbar__item{
+    color: #3982e8;
+}
+
+.weui-tab__content{
+    padding-top: 50rpx;
+}
+
+
+button{
+    padding: 6rpx 0;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.y-btn-wrap{
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+
+.y-btn-wrap button{
+    margin: 0;
+}
+
+button[size="mini"]{
+    padding: 0 10rpx;
+    background-color: transparent;
+    color: #3982e8;
+}
+
+button::after{
+    border: none;
+}

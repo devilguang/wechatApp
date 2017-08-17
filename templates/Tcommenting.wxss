@@ -1,10 +1,22 @@
 /* commenting-item */
 
-.y-commenting__item {
+.y-commenting__item, .y-commenting__item--home {
     display: flex;
     flex-flow: row;
+    flex-wrap: wrap;
+    font-size: 26rpx;
+}
+
+.y-commenting__item {
+    padding: 20rpx 0 14rpx;
+}
+
+.y-commenting__item--home {
     padding: 20rpx 20rpx 14rpx;
-    font-size: 24rpx;
+}
+
+.y-commented__item{
+    border-bottom: 20rpx solid #e8e8ed;
 }
 
 .y-commenting__item + .y-commenting__item::after {
@@ -37,6 +49,7 @@
 .y-commenting__img-box text {
     display: inline-block;
     line-height: 36rpx;
+    font-size: 26rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -44,14 +57,23 @@
 
 .y-commenting__unit {
     color: #333;
+    font-size: 28rpx;
+}
+
+.y-commenting__icon, .y-commenting__icon--home {
+    position: relative;
+    top: 6rpx;
+    margin-right: 20rpx;
 }
 
 .y-commenting__icon {
-    position: relative;
-    top: 6rpx;
+    width: 30rpx;
+    height: 32rpx;
+}
+
+.y-commenting__icon--home {
     width: 25rpx;
     height: 28rpx;
-    margin-right: 20rpx;
 }
 
 .y-commenting__info {
@@ -67,4 +89,19 @@
 
 .y-commenting____duration {
     font-size: 20rpx;
+}
+
+.y-commenting__closing{
+    color: #f00;
+}
+
+.y-commenting__btn-wrap{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-top: 10rpx;
+}
+
+.y-commenting__btn-wrap button{
+    margin: 0 20rpx 10rpx;
 }
