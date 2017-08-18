@@ -1,0 +1,41 @@
+<!--pages/collect/collect.wxml-->
+<import src="../../templates/TListItem.wxml" />
+
+<view class="container y-collect">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar__wrap">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+            </view>
+            <view class="weui-tab__panel">
+                <!-- 专家 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    收藏专家
+                </view>
+                <!-- 技术 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                   <view class="y-list">
+                        <block wx:for="{{technologyList}}" wx:key="{{item.id}}">
+                            <template is="collectItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                </view>
+                <!-- 需求 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="y-list">
+                        <block wx:for="{{demandList}}" wx:key="{{item.id}}">
+                            <template is="collectItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

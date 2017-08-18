@@ -9,3 +9,15 @@
         </view>
     </view>
 </template>
+
+<template name="collectItem">
+    <view class="list__item list__item--collect">
+        <text class="list__title">{{title}}</text>
+        <view class="list__content">
+            <view class="list__img"><image src="{{img}}" mode="aspectFit"></image></view>
+            <view class="list__text">
+                <text class="list__brief">{{brief}}</text>
+            </view>
+        </view>
+    </view>
+</template>

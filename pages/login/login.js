@@ -1,7 +1,7 @@
 // pages/login/login.js
 
 var sliderWidth = 154; // 需要设置slider的宽度，用于计算中间位置
-
+var app = getApp()
 Page({
 
     /**
@@ -13,7 +13,34 @@ Page({
         sliderOffset: 0,
         sliderLeft: 0
     },
-
+    // 账号登录
+    formSubmit: function (e) {
+        console.log(e.detail.value);
+        wx.redirectTo({
+            url: '/pages/index/index'
+        })
+        app.func.req('/user/login', 'POST', {
+            "loginName": e.detail.value.loginName,
+            "password": e.detail.value.password
+        }, function (res) {
+            console.log(res)
+        });
+    },
+    // 邀请码登录
+    formSubmitCode: function (e) {
+        console.log(e.detail.value);
+        wx.redirectTo({
+            url: '/pages/index/index'
+        });
+        // app.func.req('/user/loginCode/' + e.detail.value.code, 'POST', {}, function (res) {
+        //     console.log(res)
+        // });
+        try {
+            wx.setStorageSync('key', '123456')
+        } catch (e) {
+        }
+        console.log('1');
+    },
     tabClick: function (e) {
         this.setData({
             sliderOffset: e.currentTarget.offsetLeft,
@@ -41,5 +68,6 @@ Page({
                 });
             }
         })
+
     }
 })

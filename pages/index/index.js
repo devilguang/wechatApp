@@ -68,7 +68,9 @@ Page({
     //事件处理函数
     toSearch: function () {
         // 预留点击事件处理
-        console.log('跳转到搜索页面')
+        wx.navigateTo({
+            url: '/pages/search/search'
+        })
     },
     tabClick: function (e) {
         this.setData({

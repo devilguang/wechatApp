@@ -44,3 +44,9 @@
     font-size: 24rpx;
     overflow: hidden;
 }
+
+.list__item--collect{
+    margin-bottom: 0;
+    padding-left: 30rpx;
+    border-bottom: 20rpx solid #e8e8ed;
+}
