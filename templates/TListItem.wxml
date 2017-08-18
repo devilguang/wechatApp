@@ -17,7 +17,12 @@
             <view class="list__img"><image src="{{img}}" mode="aspectFit"></image></view>
             <view class="list__text">
                 <text class="list__brief">{{brief}}</text>
+                <view class="list__btn">
+                    <button class="weui-btn mini-btn" type="warn" size="mini">拒绝</button>
+                    <button class="weui-btn mini-btn" type="primary" size="mini">接受</button>
+                </view>
             </view>
+            
         </view>
     </view>
 </template>

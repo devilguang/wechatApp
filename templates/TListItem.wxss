@@ -50,3 +50,39 @@
     padding-left: 30rpx;
     border-bottom: 20rpx solid #e8e8ed;
 }
+
+.list__item--collect .list__title{
+    padding-right: 30rpx;
+}
+
+.list__item--collect .list__img{
+    width: 220rpx;
+    height: 200rpx;
+}
+
+.list__item--collect .list__brief{
+    height: 144rpx;
+    margin-top: 10rpx;
+    padding-right: 30rpx;
+    border-bottom: 1rpx solid #d2d2d2;
+    line-height: 44rpx;
+}
+
+.list__btn{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    box-sizing: border-box;
+}
+
+.list__btn .weui-btn{
+    margin-top: 10rpx;
+}
+
+.list__btn .weui-btn:first-child{
+    margin-top: auto;
+}
+
+button[size="mini"]{
+    line-height: 48rpx;
+}
