@@ -1,4 +1,4 @@
-var rootDocment = 'http://120.55.191.189:9002/v1';//你的域名  
+var rootDocment = 'https://xcx.youren.ai/v1';//你的域名  
 function req(url, method, data, cb) {
     wx.request({
         url: rootDocment + url,

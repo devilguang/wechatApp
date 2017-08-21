@@ -20,7 +20,7 @@
                         <button type="primary" formType="submit">立即登录</button>
                     </view>
                     <view class="section y-btn-wrap" style="margin-bottom: 30rpx; justify-content: flex-end;">
-                        <button size="mini">立即注册</button>
+                        <navigator url="/pages/register/register" open-type="redirect" hover-class="button-hover"><button size="mini">立即注册</button></navigator>
                     </view>
                 </form>
             </view>
@@ -38,7 +38,8 @@
                     </view>
                     <view class="section y-btn-wrap" style="margin-bottom: 30rpx;">
                         <button size="mini">忘记密码</button>
-                        <button size="mini">立即注册</button>
+                        
+                        <navigator url="/pages/register/register" open-type="redirect" hover-class="button-hover"><button size="mini">立即注册</button></navigator>
                     </view>
                 </form>
             </view>

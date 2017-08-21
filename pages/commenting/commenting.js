@@ -8,7 +8,7 @@ Page({
      */
     data: {
         tabs: ['待确认', '已确认', '已结束'],
-        activeIndex: 0,
+        activeIndex: 1,
         sliderOffset: 0,
         sliderLeft: 0,
         unconfirmedList: [

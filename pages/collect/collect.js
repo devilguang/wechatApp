@@ -10,6 +10,35 @@ Page({
         activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
+        professorList: [
+            {
+                id: '1',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                brief: '领域： 细菌基因工程与发酵工程;微生物分子生态;微生物生态基因组学'
+            },
+            {
+                id: '2',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                brief: '领域： 细菌基因工程与发酵工程;微生物分子生态;微生物生态基因组学'
+            },
+            {
+                id: '3',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                brief: '领域： 细菌基因工程与发酵工程;微生物分子生态;微生物生态基因组学'
+            }
+        ],
         technologyList: [
             {
                 id: '1',

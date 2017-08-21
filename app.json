@@ -1,6 +1,6 @@
 {
     "pages": [
-        "pages/collect/collect",
+        "pages/p-detail/p-detail",
         
         "pages/index/index",
         "pages/recommend/recommend",
@@ -10,9 +10,11 @@
         "pages/search/search",
 
         "pages/login/login",
+        "pages/register/register",
 
         "pages/professor/professor",
-
+        "pages/collect/collect",
+        
         "notice/msg/msg_fail"
     ],
     "window": {

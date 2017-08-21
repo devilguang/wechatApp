@@ -32,14 +32,13 @@ Page({
         wx.redirectTo({
             url: '/pages/index/index'
         });
-        // app.func.req('/user/loginCode/' + e.detail.value.code, 'POST', {}, function (res) {
-        //     console.log(res)
-        // });
-        try {
-            wx.setStorageSync('key', '123456')
-        } catch (e) {
-        }
-        console.log('1');
+        app.func.req('/user/loginCode/' + e.detail.value.code, 'POST', {}, function (res) {
+            console.log(res)
+        });
+        // try {
+        //     wx.setStorageSync('key', '123456')
+        // } catch (e) {
+        // }
     },
     tabClick: function (e) {
         this.setData({

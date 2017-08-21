@@ -44,7 +44,7 @@
         </navigator>
     </view>
     <view class="weui-cells">
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="/pages/collect/collect" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
                 <image src="../../images/icon-myself_5.png" style="margin-right: 18rpx;vertical-align: middle;width:20px; height: 20px;"></image>
             </view>

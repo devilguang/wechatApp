@@ -1,11 +1,11 @@
 .list__item {
     padding-bottom: 26rpx;
-    margin-bottom: 10rpx;
     border-bottom: 1rpx solid #d2d2d2;
 }
 
 .list__title {
     display: block;
+    margin-top: 10rpx;
     margin-bottom: 10rpx;
     line-height: 50rpx;
     color: #3982e8;
@@ -15,7 +15,7 @@
     white-space: nowrap;
 }
 
-.list__content{
+.list__content {
     display: flex;
     justify-content: space-between;
 }
@@ -25,17 +25,17 @@
     height: 134rpx;
     margin: 0 28rpx 0 15rpx;
 }
- 
+
 .list__img image {
     width: 100%;
     height: 100%;
-} 
+}
 
 .list__text {
     flex: 1;
 }
 
-.list__brief{
+.list__brief {
     display: block;
     max-height: 144rpx;
     margin-top: -8rpx;
@@ -43,46 +43,101 @@
     color: #666;
     font-size: 24rpx;
     overflow: hidden;
+    text-align: justify;
 }
 
-.list__item--collect{
+.list__item--collect {
     margin-bottom: 0;
     padding-left: 30rpx;
     border-bottom: 20rpx solid #e8e8ed;
 }
 
-.list__item--collect .list__title{
+.list__item--collect .list__title {
     padding-right: 30rpx;
 }
 
-.list__item--collect .list__img{
+.list__item--collect .list__img {
     width: 220rpx;
     height: 200rpx;
 }
 
-.list__item--collect .list__brief{
-    height: 144rpx;
-    margin-top: 10rpx;
+.list__item--collect .list__brief {
+    height: 138rpx;
+    margin-top: 4rpx;
     padding-right: 30rpx;
     border-bottom: 1rpx solid #d2d2d2;
     line-height: 44rpx;
 }
 
-.list__btn{
+.list__text .list__title {
+    margin: 0;
+    padding: 0 10rpx;
+    color: #333;
+}
+
+.list__item--collect .list__brief--professor {
+    height: 88rpx;
+    margin-top: 0;
+    padding: 0 10rpx;
+    border-bottom-color: #eee;
+    line-height: 42rpx;
+}
+
+.list__content--professor {
+    padding-top: 28rpx;
+    margin-right: 20rpx;
+}
+
+.list__img--professor {
+    width: 130rpx;
+    margin: 0 45rpx 0 15rpx;
+}
+
+.list__img--professor image {
+    width: 100%;
+    height: 130rpx;
+}
+
+.list__img--professor text {
+    display: block;
+    width: 100%;
+    line-height: 40rpx;
+    color: #3982e8;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.list__btn {
     display: flex;
-    justify-content: space-between;
-    padding: 0 10%;
+    justify-content: flex-end;
+    padding-left: 10%;
     box-sizing: border-box;
 }
 
-.list__btn .weui-btn{
+.list__btn .weui-btn {
     margin-top: 10rpx;
 }
 
-.list__btn .weui-btn:first-child{
+.list__btn .weui-btn:first-child {
     margin-top: auto;
 }
 
-button[size="mini"]{
+.list__btn button {
+    margin: 0;
+    margin-right: 60rpx;
+}
+
+.list__btn button[size="mini"] {
+    padding: 0 20rpx;
     line-height: 48rpx;
+    font-size: 24rpx;
+}
+
+.list__btn button[type="warn"] {
+    background-color: #f98044;
+}
+
+.list__btn .button-hover[type="warn"] {
+    color: #fbddcf;
+    background-color: #f69e74;
 }

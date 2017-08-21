@@ -1,0 +1,134 @@
+/* pages/p-detail/p-detail.wxss */
+
+page {
+    background-color: #fff;
+}
+
+.y-professor {
+    padding-bottom: 50px;
+}
+
+.y-professor__info {
+    width: 100%;
+    height: 304rpx;
+    border-bottom: 50rpx solid #e8e8ed;
+    background-color: #3982e8;
+}
+
+.y-professor__info-wrap {
+    position: relative;
+    top: 32rpx;
+    display: flex;
+    justify-content: flex-start;
+    width: 89.6%;
+    height: 300rpx;
+    margin: 0 auto;
+    padding: 24rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    box-shadow: 0 4rpx 10rpx rgba(125, 127, 128, 0.26);
+    box-sizing: border-box;
+}
+
+.y-professor__img {
+    width: 224rpx;
+    height: 224rpx;
+    margin-right: 28rpx;
+    border-radius: 50%;
+}
+
+.y-professor__img image {
+    width: 100%;
+    height: 100%;
+}
+
+.y-professor__text {
+    width: 60%;
+}
+
+.y-professor__text button[size="mini"] {
+    line-height: 52rpx;
+}
+
+.y-professor__text text {
+    display: block;
+    line-height: 50rpx;
+    font-size: 30rpx;
+}
+
+.y-professor__text text.y-professor__name {
+    margin-top: -6rpx;
+    line-height: 60rpx;
+    color: #3982e8;
+    font-size: 36rpx;
+}
+
+.y-professor__text--list .y-professor__name{
+    position: relative;
+    top: -40rpx;
+}
+
+.y-professor__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.y-professor__btn button {
+    margin: 0;
+}
+
+.y-professor__btn text + button {
+    border: none;
+    padding: 0;
+    line-height: 36rpx;
+    background-color: transparent;
+}
+
+.y-professor__btn button::after {
+    display: none;
+}
+
+.y-professor__btn image {
+    width: 36rpx;
+    height: 36rpx;
+}
+
+.y-professor .weui-navbar__slider {
+    width: 4em;
+}
+
+.weui-tab__content {
+    padding-top: 0;
+}
+
+.y-paper__item {
+    border-bottom: 1rpx solid #e8e8ed;
+    padding: 20rpx 40rpx 20rpx 70rpx;
+}
+
+.y-paper__item text {
+    display: block;
+    width: 100%;
+    line-height: 50rpx;
+    color: #666;
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.y-paper__item text.y-paper__title {
+    font-size: 28rpx;
+}
+
+.y-paper__title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14rpx;
+    height: 14rpx;
+    margin-left: -30rpx;
+    margin-top: 18rpx;
+    border-radius: 50%;
+    background-color: #3982e8;
+}

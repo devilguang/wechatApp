@@ -1,0 +1,71 @@
+<!--pages/p-detail/p-detail.wxml-->
+<view class="y-professor">
+    <!-- 专家基本信息 -->
+    <view class="y-professor__info">
+        <view class="y-professor__info-wrap">
+            <view class="y-professor__img">
+                <image mode="aspectFit" src="../../images/img-home_1.png"></image>
+            </view>
+            <view class="y-professor__text" wx:if="{{myself}}">
+                <view class="y-professor__btn"><button class="y-professor__btn" type="primary" size="mini">编辑主页</button></view>
+                <text class="y-professor__name">{{name}}</text>
+                <text>{{professionalTitle}} | {{region}}</text>
+                <text>{{college}}</text>
+            </view>
+            <view class="y-professor__text y-professor__text--list" wx:else>
+                <view class="y-professor__btn">
+                    <text></text>
+                    <button class="y-professor__collect"><image src="../../images/icon-collect_1.png"></image></button>
+                </view>
+                <text class="y-professor__name">{{name}}</text>
+                <text>{{professionalTitle}} | {{region}}</text>
+                <text>{{college}}</text>
+            </view>
+        </view>
+    </view>
+    <!-- 专家其他信息 -->
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar__wrap">
+                <view class="weui-navbar">
+                    <block wx:for="{{tabs}}" wx:key="*this">
+                        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                            <view class="weui-navbar__title">{{item}}</view>
+                        </view>
+                    </block>
+                    <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+                </view>
+            </view>
+            <view class="weui-tab__panel">
+                <!-- 个人简介 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class="y-content">
+                        {{brief}}
+                    </view>
+                </view>
+                <!-- 研究领域 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                    <view class="y-content">
+                        {{researchField}}
+                    </view>
+                </view>
+                <!-- 研究论文 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+                    <view class="y-list">
+                        <view class="y-paper__item" wx:for="{{paperList}}" wx:key="{{item.title}}">
+                            <text class="y-paper__title">{{item.title}}</text>
+                            <text>作者：{{item.author}}</text>
+                        </view>
+                    </view>
+                </view>
+                <!-- 项目成果 -->
+                <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+                    <view class="y-content">
+                        {{result}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <button wx:if="{{!myself}}" class="y-btn--large" type="primary">立即联系</button>
+</view>

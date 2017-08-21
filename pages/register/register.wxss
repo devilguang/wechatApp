@@ -1,0 +1,72 @@
+/* pages/register/register.wxss */
+
+page {
+    background-color: #fff;
+    font-size: 24rpx;
+}
+
+.page__bd {
+    width: 78%;
+    margin: 62rpx auto;
+}
+
+.section--reigster {
+    line-height: 40rpx;
+    margin-bottom: 20rpx;
+    font-size: 20rpx;
+}
+
+.section--reigster button {
+    position: relative;
+    top: 18rpx;
+}
+
+.weui-check__label {
+    background: #fff!important;
+}
+
+.weui-cell {
+    padding: 0;
+    background: #fff;
+}
+
+.weui-check__hd_in-checkbox {
+    width: 32rpx;
+    height: 32rpx;
+    border: 1rpx solid #dedede;
+    border-radius: 5rpx;
+    margin-right: 10rpx;
+    margin-top: 30rpx;
+    padding-right: 0;
+}
+
+.weui-icon-checkbox_success {
+    margin: 0;
+}
+
+button {
+    padding: 6rpx 0;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.y-btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+    font-size: 26rpx;
+}
+
+.y-btn-wrap button {
+    margin: 0;
+}
+
+button[size="mini"] {
+    padding: 0;
+    background-color: transparent;
+    color: #3982e8;
+}
+
+button::after {
+    border: none;
+}

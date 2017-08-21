@@ -17,7 +17,11 @@
             <view class="weui-tab__panel">
                 <!-- 专家 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                    收藏专家
+                    <view class="y-list">
+                       <block wx:for="{{professorList}}" wx:key="{{item.id}}">
+                            <template is="collectProfessItem" data="{{...item}}"></template>
+                        </block>
+                    </view>
                 </view>
                 <!-- 技术 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">

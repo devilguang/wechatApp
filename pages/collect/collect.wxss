@@ -1,1 +1,4 @@
 /* pages/collect/collect.wxss */
+.weui-tab__content{
+    padding-top: 0;
+}
