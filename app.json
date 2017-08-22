@@ -1,6 +1,7 @@
+
 {
-    "pages": [
-        "pages/p-detail/p-detail",
+    "pages": [  
+        "pages/setting/setting",
         
         "pages/index/index",
         "pages/recommend/recommend",
@@ -12,7 +13,17 @@
         "pages/login/login",
         "pages/register/register",
 
+        "pages/technology/technology",
+        "pages/demand/demand",
         "pages/professor/professor",
+        
+        "pages/m-technology/m-technology",
+        "pages/m-demand/m-demand",
+
+        "pages/t-detail/t-detail",
+        "pages/p-detail/p-detail",
+        "pages/d-detail/d-detail",
+        
         "pages/collect/collect",
         
         "notice/msg/msg_fail"

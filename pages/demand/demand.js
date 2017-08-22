@@ -1,4 +1,4 @@
-// pages/professor/professor.js
+// pages/demand/demand.js
 Page({
 
     /**
@@ -16,30 +16,21 @@ Page({
         list: [
             {
                 id: '1',
-                name: '姓名',
-                college: '上海交通大学',
-                unit: '材料科学学院',
-                professionalTitle: '教授',
-                img: '../../images/img-home_1.png',
-                brief: '领域： 细菌基因工程与发酵工程;微生物分子生态;微生物生态基因组学'
+                title: '环保型发泡辊压纤维增强密封衬垫材料',
+                img: '../../images/img-home_5.jpg',
+                brief: '需解决技术难题： 芳纶浆粕纤维和矿物纤维替代石棉纤维和橡胶，填充剂，发泡剂，交联剂，配合剂等原料采用辊压成型方法制得一种环保型发泡纤维增强密封材料。'
             },
             {
                 id: '2',
-                name: '姓名',
-                college: '上海交通大学',
-                unit: '材料科学学院',
-                professionalTitle: '教授',
-                img: '../../images/img-home_1.png',
-                brief: '领域： 细菌基因工程与发酵工程;微生物分子生态;微生物生态基因组学'
+                title: '环保型发泡辊压纤维增强密封衬垫材料',
+                img: '../../images/img-home_5.jpg',
+                brief: '需解决技术难题： 芳纶浆粕纤维和矿物纤维替代石棉纤维和橡胶，填充剂，发泡剂，交联剂，配合剂等原料采用辊压成型方法制得一种环保型发泡纤维增强密封材料。'
             },
             {
                 id: '3',
-                name: '姓名',
-                college: '上海交通大学',
-                unit: '材料科学学院',
-                professionalTitle: '教授',
-                img: '../../images/img-home_1.png',
-                brief: '领域： 细菌基因工程与发酵工程;微生物分子生态;微生物生态基因组学'
+                title: '环保型发泡辊压纤维增强密封衬垫材料',
+                img: '../../images/img-home_5.jpg',
+                brief: '需解决技术难题： 芳纶浆粕纤维和矿物纤维替代石棉纤维和橡胶，填充剂，发泡剂，交联剂，配合剂等原料采用辊压成型方法制得一种环保型发泡纤维增强密封材料。'
             }
         ]
     },

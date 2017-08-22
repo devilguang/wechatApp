@@ -1,0 +1,37 @@
+<!--pages/d-detail/d-detail.wxml-->
+<view class="y-detail">
+    <view class="y-detail__info">
+        <view class="y-detail__name" wx:if="{{!myself}}">
+            <text>{{title}}</text>
+            <button class="y-detail__collect"><image src="../../images/icon-collect_1.png"></image></button>
+        </view>
+        <view class="y-detail__name" wx:else>
+            <text>{{title}}</text>
+            <button class="y-detail__edit" type="primary" size="mini">编辑</button>
+        </view>
+        <view class="y-detail__con">
+            <view class="y-detail__img">
+                <image src="{{img}}" mode="aspectFit"></image>
+            </view>
+            <view class="y-detail__text">
+                <view><text class="y-detail__text--left">技术领域</text>{{field}}</view>
+                <view><text class="y-detail__text--left">关键词</text>{{keyword}}</view>
+                <view><text class="y-detail__text--left">所在地</text>{{addr}}</view>
+                <view><text class="y-detail__text--left">定价</text>{{money}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="y-detail__item">
+        <view class="y-detail__title">需求简介</view>
+        <view class="y-content">
+            {{intro}}
+        </view>
+    </view>
+    <view class="y-detail__item">
+        <view class="y-detail__title">企业信息</view>
+        <view class="y-content">
+            {{companyInfo}}
+        </view>
+    </view>
+    <button wx:if="{{!myself}}" class="y-btn--large" type="primary">立即联系</button>
+</view>

@@ -1,0 +1,5 @@
+/* pages/t-detail/t-detail.wxss */
+page{
+    background-color: #fff;
+}
+

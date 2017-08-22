@@ -21,28 +21,6 @@ page {
     top: 18rpx;
 }
 
-.weui-check__label {
-    background: #fff!important;
-}
-
-.weui-cell {
-    padding: 0;
-    background: #fff;
-}
-
-.weui-check__hd_in-checkbox {
-    width: 32rpx;
-    height: 32rpx;
-    border: 1rpx solid #dedede;
-    border-radius: 5rpx;
-    margin-right: 10rpx;
-    margin-top: 30rpx;
-    padding-right: 0;
-}
-
-.weui-icon-checkbox_success {
-    margin: 0;
-}
 
 button {
     padding: 6rpx 0;

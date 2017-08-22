@@ -1,0 +1,4 @@
+/* pages/technology/technology.wxss */
+page{
+    background-color: #fff;
+}

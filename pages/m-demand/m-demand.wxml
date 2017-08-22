@@ -1,0 +1,21 @@
+<!--pages/m-demand/m-demand.wxml-->
+<import src="../../templates/TListItem.wxml" />
+
+<view class="container">
+    <view class="y-title">
+        <text>推广中</text>
+    </view>
+    <view class="y-list">
+        <block wx:for="{{list}}" wx:key="{{item.id}}">
+            <template is="mItem" data="{{...item}}"></template>
+        </block>
+    </view>
+    <view class="y-title">
+        <text>已下架</text>
+    </view>
+    <view class="y-list">
+        <block wx:for="{{soldOutList}}" wx:key="{{item.id}}">
+            <template is="mItem" data="{{...item}}"></template>
+        </block>
+    </view>
+</view>

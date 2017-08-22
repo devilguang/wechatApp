@@ -1,1 +1,4 @@
 /* pages/professor/professor.wxss */
+page{
+    background-color: #fff;
+}

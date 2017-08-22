@@ -12,11 +12,11 @@
 
 <template name="collectItem">
     <view class="list__item list__item--collect">
-        <text class="list__title">{{title}}</text>
-        <view class="list__content">
-            <view class="list__img"><image src="{{img}}" mode="aspectFit"></image></view>
-            <view class="list__text">
-                <text class="list__brief">{{brief}}</text>
+        <text class="list__title list__title--collect">{{title}}</text>
+        <view class="list__content list__content--collect">
+            <view class="list__img list__img--collect"><image src="{{img}}" mode="aspectFit"></image></view>
+            <view class="list__text list__text--collect">
+                <text class="list__brief list__brief--collect">{{brief}}</text>
                 <view class="list__btn">
                     <button class="weui-btn mini-btn" type="primary" size="mini">查看详情</button>
                     <button class="weui-btn mini-btn" type="warn" size="mini">立即联系</button>
@@ -31,7 +31,7 @@
 <template name="collectProfessItem">
     <navigator open-type="navigate" class="list__item list__item--collect" url="/pages/p-detail/p-detail">
         <view class="list__content list__content--professor">
-            <view class="list__img--professor"><image src="{{img}}" mode="aspectFit"></image><text>{{name}}</text></view>
+            <view class="list__img list__img--professor"><image src="{{img}}" mode="aspectFit"></image><text>{{name}}</text></view>
             <view class="list__text">
                 <text class="list__title">{{college}} {{unit}} {{professionalTitle}}</text>
                 <text class="list__brief list__brief--professor">{{brief}}</text>
@@ -42,4 +42,32 @@
             </view>
         </view>
     </navigator>
+</template>
+
+<template name="professItem">
+    <navigator open-type="navigate" class="list__item" url="/pages/p-detail/p-detail">
+        <view class="list__content list__content--professor">
+            <view class="list__img list__img--professor"><image src="{{img}}" mode="aspectFit"></image></view>
+            <view class="list__text list__text--professor-item">
+                <view class="list__title list__title--professor"><text class="list__name--professor">{{name}}</text>{{college}} {{professionalTitle}}</view>
+                <text class="list__brief">{{brief}}</text>
+            </view>
+        </view>
+    </navigator>
+</template>
+
+<template name="mItem">
+    <view class="list__item list__item--manage">
+        <view class="list__content list__content--manage">
+            <view class="list__img list__img--manage"><image src="{{img}}" mode="aspectFit"></image></view>
+            <view class="list__text list__text--manage">
+                <text class="list__title list__title--manage">{{title}}</text>
+                <text class="list__brief list__brief--manage">{{brief}}</text>
+                <view class="list__btn">
+                    <view class="y-switch" wx:if="{{bud===1}}">上架<switch checked color="#3982e8" /></view>
+                    <view class="y-switch y-switch--out" wx:else>下架<switch color="#3982e8" /></view>
+                </view>
+            </view>
+        </view>
+    </view>
 </template>

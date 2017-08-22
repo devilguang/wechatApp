@@ -1,0 +1,17 @@
+/* pages/setting/setting.wxss */
+page{
+    background-color: #fff;
+}
+
+.y-setting .weui-cell{
+    flex-wrap: wrap;
+    padding: 30rpx;
+}
+
+.y-explain{
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 50rpx; 
+    line-height: 44rpx;
+    font-size: 24rpx;
+}

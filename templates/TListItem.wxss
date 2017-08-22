@@ -46,40 +46,44 @@
     text-align: justify;
 }
 
+/* collect list */
+
 .list__item--collect {
     margin-bottom: 0;
     padding-left: 30rpx;
     border-bottom: 20rpx solid #e8e8ed;
 }
 
-.list__item--collect .list__title {
+.list__title--collect {
     padding-right: 30rpx;
 }
 
-.list__item--collect .list__img {
+.list__img--collect {
     width: 220rpx;
     height: 200rpx;
 }
 
-.list__item--collect .list__brief {
+.list__brief--collect {
     height: 138rpx;
     margin-top: 4rpx;
     padding-right: 30rpx;
-    border-bottom: 1rpx solid #d2d2d2;
+    border-bottom: 1rpx solid #dadada;
     line-height: 44rpx;
 }
 
-.list__text .list__title {
+.list__title--collect {
     margin: 0;
     padding: 0 10rpx;
     color: #333;
 }
 
-.list__item--collect .list__brief--professor {
+/* professor list */
+
+.list__brief--professor {
     height: 88rpx;
     margin-top: 0;
     padding: 0 10rpx;
-    border-bottom-color: #eee;
+    border-bottom:1rpx solid #eee;
     line-height: 42rpx;
 }
 
@@ -105,6 +109,15 @@
     color: #3982e8;
     font-size: 30rpx;
     text-align: center;
+}
+
+.list__title--professor{
+    color: #333;
+}
+
+.list__name--professor{
+    margin-right: 30rpx;
+    color: #3982e8;
 }
 
 .list__btn {
@@ -140,4 +153,31 @@
 .list__btn .button-hover[type="warn"] {
     color: #fbddcf;
     background-color: #f69e74;
+}
+
+/* manage list */
+
+.list__item--manage {
+    padding-top: 20rpx;
+}
+
+.list__img--manage {
+    margin-left: 20rpx;
+    width: 164rpx;
+    height: 130rpx;
+}
+
+.list__title--manage, .list__brief--manage {
+    padding-right: 40rpx;
+}
+
+.list__title--manage{
+    padding-left: 0;
+    margin-top: -6rpx;
+    color: #333;
+}
+
+.list__brief--manage{
+    max-height: 84rpx;
+    line-height: 42rpx;
 }

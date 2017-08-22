@@ -1,4 +1,4 @@
-<!--pages/professor/professor.wxml-->
+<!--pages/technology/technology.wxml-->
 <import src="../../templates/TListItem.wxml" />
 
 <view class="list-wrap">
@@ -29,7 +29,7 @@
     </view>
     <view class="y-list--center" bindtap="showCheckBox">
         <block wx:for="{{list}}" wx:key="{{item.id}}">
-            <template is="professItem" data="{{...item}}"></template>
+            <template is="listItem" data="{{...item}}"></template>
         </block>
     </view>
 </view>
