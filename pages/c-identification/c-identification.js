@@ -1,4 +1,4 @@
-// example/msg/msg_fail.js
+// pages/c-identification/c-identification.js
 Page({
 
   /**

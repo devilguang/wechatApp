@@ -1,0 +1,9 @@
+/* pages/attention/attention.wxss */
+page{
+    background-color: #fff;
+}
+
+.y-attention .field-list{
+    width: 96%;
+    border: none;
+}

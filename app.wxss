@@ -122,11 +122,11 @@ button[type="primary"] {
 
 /* form */
 
-form {
+.page__bd {
     width: 100%;
 }
 
-form input {
+.page__bd input {
     width: 100%;
     height: 72rpx;
     padding: 6rpx 3.7%;
@@ -308,7 +308,6 @@ button.y-detail__collect::after {
     padding: 0 10rpx;
     border-top: 1rpx solid #d2d2d2;
     border-bottom: 1rpx solid #d2d2d2;
-    
     box-sizing: border-box;
 }
 
@@ -339,7 +338,8 @@ button.y-detail__collect::after {
     margin-top: 30rpx;
     padding-right: 0;
 }
-.field-list{
+
+.field-list {
     position: absolute;
     left: 0;
     right: 0;
@@ -362,14 +362,26 @@ button.y-detail__collect::after {
 .field-list .weui-icon-checkbox_success {
     margin-top: -30rpx;
 }
-.field-list checkbox-group{
+
+.field-list checkbox-group {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.field-list .weui-check__label{
-    width: 50%;
+.field-list .weui-check__label {
+    display: inline-block;
+    box-sizing: border-box;
 }
 
-.field-list .weui-cell::before{
+.field-list .weui-cell__bd{
+    margin-left: 60rpx;
+    margin-top: -60rpx;
+}
+
+.field-list .weui-cell {
+    padding: 5px 10px;
+}
+
+.field-list .weui-cell::before {
     display: none;
 }

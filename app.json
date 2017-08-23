@@ -1,7 +1,7 @@
 
 {
     "pages": [  
-        "pages/setting/setting",
+        "pages/c-identification/c-identification",
         
         "pages/index/index",
         "pages/recommend/recommend",
@@ -11,6 +11,7 @@
         "pages/search/search",
 
         "pages/login/login",
+        "pages/attention/attention",
         "pages/register/register",
 
         "pages/technology/technology",
@@ -24,7 +25,9 @@
         "pages/p-detail/p-detail",
         "pages/d-detail/d-detail",
         
+        "pages/linkman/linkman",
         "pages/collect/collect",
+        "pages/setting/setting",
         
         "notice/msg/msg_fail"
     ],

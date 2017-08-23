@@ -9,4 +9,5 @@
             <view class="y-explain">{{item.tip}}</view>
         </view>
     </view>
+    <button class="y-btn--large" type="primary">提现</button>
 </view>

@@ -1,0 +1,36 @@
+/* pages/c-identification/c-identification.wxss */
+page{
+    background-color: #fff;
+}
+
+.form-identify{
+    width: 90%;
+    margin: 50rpx auto;
+    /* border: 1rpx solid #e8e8ed; */
+    border-radius: 10rpx;
+    font-size: 28rpx;
+}
+
+.form-identify .weui-cells::after, .form-identify .weui-cells::before{
+    display: none;
+}
+
+.form-identify .weui-input{
+    height: 60rpx;
+    padding: 10rpx;
+    border: 1rpx solid #e8e8ed;
+    box-sizing: border-box;
+}
+
+
+.form-identify .weui-cells{
+    font-size: 28rpx;
+}
+
+.form-identify .weui-cell{
+    margin-bottom: 30rpx;
+}
+
+.form-identify .weui-cell::before{
+    display: none;
+}
