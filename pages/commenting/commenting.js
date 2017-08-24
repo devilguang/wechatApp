@@ -225,7 +225,7 @@ Page({
             listProfessor: checkedList2,
         });
     },
-    // 需求沟通
+    // 需求沟通选择
     checkboxChange: function (e) {
         var checked = false;
         var checkboxItems = this.data.list, values = e.detail.value;
@@ -254,7 +254,7 @@ Page({
             list: checkboxItems
         });
     },
-    // 专家约见
+    // 专家约见选择
     checkedProfessorChange: function (e) {
         var checked = false;
         var checkboxItems = this.data.listProfessor, values = e.detail.value;
@@ -281,6 +281,11 @@ Page({
         this.setData({
             allItem: checkboxlist,
             listProfessor: checkboxItems
+        });
+    },
+    editDemand: function(){
+        this.setData({
+            edit: true
         });
     },
     /**

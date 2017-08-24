@@ -257,3 +257,18 @@
     color: #fff;
     text-align: center;
 }
+
+.list__btn--delete{
+    display: none;
+    position: absolute;
+    right: 0;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    width: 106rpx;
+    height: 242rpx;
+    margin-top: -30rpx;
+    /* margin-left: 72rpx; */
+    background-color: #f00;
+    color: #fff;
+}

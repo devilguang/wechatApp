@@ -79,8 +79,8 @@
                             <view>
                                 <image class="y-title__icon" src="../../images/icon-commenting_3.png"></image><text>需求沟通</text>
                             </view>
-                            <view class="y-title__btn--edit" wx:if="{{!edit}}">编辑</view>
-                            <view class="y-title__btn--edit" wx:else>完成</view>
+                            <view class="y-title__btn--edit" bindtap="editDemand" wx:if="{{!edit}}">编辑</view>
+                            <view class="y-title__btn--edit" bindtap="submitDemand" wx:else>完成</view>
                         </view>
                         <checkbox-group class="y-list" bindchange="checkboxChange">
                             <label class="weui-cell weui-check__label" wx:for="{{list}}" wx:key="{{item.id}}">
@@ -97,6 +97,7 @@
                                             <text class="list__subtext">行业：{{item.field}}</text>
                                             <view class="list__money">￥{{item.money}}</view>
                                         </view>
+                                        <view class="list__btn--delete">删除</view>
                                     </view>
                                 </view>
                             </label>
@@ -105,8 +106,8 @@
                             <view>
                                 <image class="y-title__icon" src="../../images/icon-commenting_4.png"></image><text>专家约见</text>
                             </view>
-                            <view class="y-title__btn--edit" wx:if="{{!editProfessor}}">编辑</view>
-                            <view class="y-title__btn--edit" wx:else>完成</view>
+                            <view class="y-title__btn--edit" bindtap="editProfessor" wx:if="{{!editProfessor}}">编辑</view>
+                            <view class="y-title__btn--edit" bindtap="submitProfessor" wx:else>完成</view>
                         </view>
                         <checkbox-group class="y-list" bindchange="checkedProfessorChange">
                             <label class="weui-cell weui-check__label" wx:for="{{listProfessor}}" wx:key="{{item.id}}">

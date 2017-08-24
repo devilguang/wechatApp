@@ -1,11 +1,10 @@
 
 {
     "pages": [  
-        "pages/setting/setting",
+        "pages/commenting/commenting",
         
         "pages/index/index",
         "pages/recommend/recommend",
-        "pages/commenting/commenting",
         "pages/myself/myself",
 
         "pages/search/search",
@@ -29,6 +28,7 @@
         
         "pages/linkman/linkman",
         "pages/collect/collect",
+        "pages/setting/setting",
         
         "notice/msg/msg_fail"
     ],
