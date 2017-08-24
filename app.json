@@ -1,7 +1,7 @@
 
 {
     "pages": [  
-        "pages/c-identification/c-identification",
+        "pages/setting/setting",
         
         "pages/index/index",
         "pages/recommend/recommend",
@@ -12,6 +12,7 @@
 
         "pages/login/login",
         "pages/attention/attention",
+        "pages/c-identification/c-identification",
         "pages/register/register",
 
         "pages/technology/technology",
@@ -21,13 +22,13 @@
         "pages/m-technology/m-technology",
         "pages/m-demand/m-demand",
 
-        "pages/t-detail/t-detail",
         "pages/p-detail/p-detail",
+        "pages/c-detail/c-detail",
+        "pages/t-detail/t-detail",
         "pages/d-detail/d-detail",
         
         "pages/linkman/linkman",
         "pages/collect/collect",
-        "pages/setting/setting",
         
         "notice/msg/msg_fail"
     ],

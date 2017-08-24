@@ -7,10 +7,94 @@ Page({
      * 页面的初始数据
      */
     data: {
+        roldId: 2, //角色：1为专家，2为企业
         tabs: ['待确认', '已确认', '已结束'],
-        activeIndex: 1,
+        tabs2: ['待付款', '已确认', '已结束'],
+        activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
+        time: 'drop',
+        money: 'litre',
+        accountMoney: 0,
+        allItem: [{ value: '全选', checked: false }],
+        edit: false,
+        editProfessor: false,
+        list: [
+            {
+                id: '1',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                direction: 'ASIC/FOPI设计、测试，微电子行业研究',
+                field: '微电子、半导体、多媒体技术',
+                money: 10,
+                checked: false
+            },
+            {
+                id: '2',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                direction: 'ASIC/FOPI设计、测试，微电子行业研究',
+                field: '微电子、半导体、多媒体技术',
+                money: 10,
+                checked: false
+            },
+            {
+                id: '3',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                direction: 'ASIC/FOPI设计、测试，微电子行业研究',
+                field: '微电子、半导体、多媒体技术',
+                money: 10,
+                checked: false
+            }
+        ],
+        listProfessor: [
+            {
+                id: '1',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                direction: 'ASIC/FOPI设计、测试，微电子行业研究',
+                field: '微电子、半导体、多媒体技术',
+                money: 10,
+                checked: false
+            },
+            {
+                id: '2',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                direction: 'ASIC/FOPI设计、测试，微电子行业研究',
+                field: '微电子、半导体、多媒体技术',
+                money: 10,
+                checked: false
+            },
+            {
+                id: '3',
+                name: '姓名',
+                college: '上海交通大学',
+                unit: '材料科学学院',
+                professionalTitle: '教授',
+                img: '../../images/img-home_1.png',
+                direction: 'ASIC/FOPI设计、测试，微电子行业研究',
+                field: '微电子、半导体、多媒体技术',
+                money: 10,
+                checked: false
+            }
+        ],
         unconfirmedList: [
             {
                 id: '1',
@@ -106,6 +190,97 @@ Page({
         this.setData({
             sliderOffset: e.currentTarget.offsetLeft,
             activeIndex: e.currentTarget.id
+        });
+    },
+    // 全选
+    checkAllChange: function (e) {
+        var checked = false;
+        var checkboxItems = this.data.allItem, values = e.detail.value;
+        for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
+            checkboxItems[i].checked = false;
+
+            for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
+                if (checkboxItems[i].value == values[j]) {
+                    checkboxItems[i].checked = true;
+                    checked = true;
+                    break;
+                }
+            }
+
+        };
+
+        var checkedList = this.data.list;
+        for (var i = 0, lenI = checkedList.length; i < lenI; ++i) {
+            checkedList[i].checked = checked;
+        }
+
+        var checkedList2 = this.data.listProfessor;
+        for (var i = 0, lenI = checkedList2.length; i < lenI; ++i) {
+            checkedList2[i].checked = checked;
+        }
+
+        this.setData({
+            allItem: checkboxItems,
+            list: checkedList,
+            listProfessor: checkedList2,
+        });
+    },
+    // 需求沟通
+    checkboxChange: function (e) {
+        var checked = false;
+        var checkboxItems = this.data.list, values = e.detail.value;
+        for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
+            checkboxItems[i].checked = false;
+
+            for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
+                if (checkboxItems[i].id == values[j]) {
+                    checkboxItems[i].checked = true;
+                    break;
+                }
+            }
+        }
+
+        if (checkboxItems.length === values.length) {
+            checked = true
+        }
+
+        var checkboxlist = this.data.allItem;
+        for (var i = 0, lenI = checkboxlist.length; i < lenI; ++i) {
+            checkboxlist[i].checked = checked;
+        };
+
+        this.setData({
+            allItem: checkboxlist,
+            list: checkboxItems
+        });
+    },
+    // 专家约见
+    checkedProfessorChange: function (e) {
+        var checked = false;
+        var checkboxItems = this.data.listProfessor, values = e.detail.value;
+        for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
+            checkboxItems[i].checked = false;
+
+            for (var j = 0, lenJ = values.length; j < lenJ; ++j) {
+                if (checkboxItems[i].id == values[j]) {
+                    checkboxItems[i].checked = true;
+                    break;
+                }
+            }
+        }
+
+        if (checkboxItems.length === values.length) {
+            checked = true
+        }
+
+        var checkboxlist = this.data.allItem;
+        for (var i = 0, lenI = checkboxlist.length; i < lenI; ++i) {
+            checkboxlist[i].checked = checked;
+        };
+
+        this.setData({
+            allItem: checkboxlist,
+            listProfessor: checkboxItems
         });
     },
     /**

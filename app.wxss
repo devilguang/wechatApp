@@ -24,9 +24,11 @@ page {
 
 .y-title {
     width: 96%;
+    height: 62rpx;
     padding: 0 2%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     line-height: 60rpx;
     font-size: 30rpx;
 }
@@ -35,7 +37,7 @@ page {
     color: #3982e8;
 }
 
-.y-title::after {
+.y-title::before {
     content: "";
     position: absolute;
     left: 0;
@@ -118,6 +120,7 @@ button[type="primary"] {
     bottom: 0;
     width: 100%;
     border-radius: 0;
+    font-size: 32rpx;
 }
 
 /* form */
@@ -226,7 +229,7 @@ button.y-detail__collect::after {
     border-radius: 50%;
     background-color: #3982e8;
     border: 1rpx solid #fff;
-    box-shadow: 0 0 2rpx #3982e8;
+    box-shadow: 0 0 4rpx #3982e8;
 }
 
 .y-detail__con {
@@ -253,16 +256,25 @@ button.y-detail__collect::after {
 }
 
 .y-detail__text {
-    max-width: 58%;
+    max-width: 64%;
     line-height: 44rpx;
     color: #333;
     font-size: 26rpx;
 }
 
+.y-detail__text view{
+    display: flex;
+    justify-content: flex-start;
+}
+
 .y-detail__text--left {
-    display: inline-block;
+    display: block;
     width: 124rpx;
     font-weight: 700;
+}
+
+.y-detail__text--left + text{
+    max-width: 70%;
 }
 
 .y-detail__edit {
@@ -384,4 +396,96 @@ button.y-detail__collect::after {
 
 .field-list .weui-cell::before {
     display: none;
+}
+
+
+/* y-professor */
+.y-professor {
+    padding-bottom: 50px;
+}
+
+.y-professor__info {
+    width: 100%;
+    height: 304rpx;
+    border-bottom: 50rpx solid #e8e8ed;
+    background-color: #3982e8;
+}
+
+.y-professor__info-wrap {
+    position: relative;
+    top: 32rpx;
+    display: flex;
+    justify-content: flex-start;
+    width: 89.6%;
+    height: 300rpx;
+    margin: 0 auto;
+    padding: 24rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+    box-shadow: 0 4rpx 10rpx rgba(125, 127, 128, 0.26);
+    box-sizing: border-box;
+}
+
+.y-professor__img {
+    width: 224rpx;
+    height: 224rpx;
+    margin-right: 28rpx;
+    border-radius: 50%;
+}
+
+.y-professor__img image {
+    width: 100%;
+    height: 100%;
+}
+
+.y-professor__text {
+    width: 60%;
+}
+
+.y-professor__text button[size="mini"] {
+    padding:0 20rpx;
+    line-height: 52rpx;
+}
+
+.y-professor__text text {
+    display: block;
+    line-height: 50rpx;
+    font-size: 30rpx;
+}
+
+.y-professor__text text.y-professor__name {
+    margin-top: -2rpx;
+    line-height: 60rpx;
+    color: #3982e8;
+    font-size: 36rpx;
+}
+
+.y-professor__text--list .y-professor__name{
+    position: relative;
+    top: -40rpx;
+}
+
+.y-professor__btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.y-professor__btn button {
+    margin: 0;
+}
+
+.y-professor__btn text + button {
+    border: none;
+    padding: 0;
+    line-height: 36rpx;
+    background-color: transparent;
+}
+
+.y-professor__btn button::after {
+    display: none;
+}
+
+.y-professor__btn image {
+    width: 36rpx;
+    height: 36rpx;
 }

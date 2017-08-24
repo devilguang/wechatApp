@@ -5,11 +5,13 @@ Page({
      * 页面的初始数据
      */
     data: {
+        roleId: 2,
+        edit: false,
         settingList: [
             {
                 title: '今日收益',
                 icon: '../../images/icon-setting_2.png',
-                tip:'1000.00'
+                tip: '1000.00'
             },
             {
                 title: '累计收益',
@@ -17,7 +19,7 @@ Page({
                 tip: '10000.00'
             },
             {
-                title: '累计资讯次数',
+                title: '累计咨询次数',
                 icon: '../../images/icon-setting_1.png',
                 tip: '3'
             },
@@ -31,9 +33,38 @@ Page({
                 icon: '../../images/icon-setting_2.png',
                 tip: '5000.00'
             }
+        ],
+        settingCompanyList: [
+            {
+                title: '今日支出',
+                icon: '../../images/icon-setting_2.png',
+                tip: '1000.00'
+            },
+            {
+                title: '累计支出',
+                icon: '../../images/icon-setting_2.png',
+                tip: '10000.00'
+            },
+            {
+                title: '累计咨询次数',
+                icon: '../../images/icon-setting_1.png',
+                tip: '3'
+            }
         ]
     },
-
+    editBtn: function () {
+        this.setData({
+            edit: true
+        })
+    },
+    submitBtn: function () {
+        this.setData({
+            edit: false
+        })
+    },
+    formSubmit: function (e) {
+        console.log(e.detail.value)
+    },
     /**
      * 生命周期函数--监听页面加载
      */

@@ -109,34 +109,151 @@
     white-space: nowrap;
 }
 
-.y-commenting__filtrate-wrap{
+.y-commenting__filtrate-wrap {
     justify-content: flex-start;
 }
 
-.y-commenting__filtrate{
+.y-commenting__filtrate {
     margin-left: 10rpx;
     padding: 0 60rpx;
     color: #676566;
 }
 
-.y-commenting__filtrate::before,
-.y-commenting__filtrate::after{
+.y-commenting__filtrate::before, .y-commenting__filtrate::after {
     content: "";
     position: absolute;
     display: block;
 }
 
-.y-commenting__filtrate::before{
+.y-commenting__filtrate::before {
     margin-left: 70rpx;
     margin-top: 18rpx;
-    border-left: 6rpx solid transparent; 
-    border-right: 6rpx solid transparent; 
-    border-bottom: 10rpx solid #676566; 
+    border-left: 6rpx solid transparent;
+    border-right: 6rpx solid transparent;
+    border-bottom: 10rpx solid #676566;
 }
-.y-commenting__filtrate::after{
+
+.y-commenting__filtrate::after {
     margin-left: 70rpx;
     margin-top: -26rpx;
-    border-left: 6rpx solid transparent; 
-    border-right: 6rpx solid transparent; 
-    border-top: 10rpx solid #676566; 
+    border-left: 6rpx solid transparent;
+    border-right: 6rpx solid transparent;
+    border-top: 10rpx solid #676566;
+}
+
+.y-commenting__filtrate--litre::before {
+    border-bottom-color: #3982e8;
+}
+
+.y-commenting__filtrate--drop::after {
+    border-top-color: #3982e8;
+}
+
+/* y-obligation */
+
+.y-obligation {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 84rpx;
+    background-color: #fff;
+}
+
+.y-title__btn--edit {
+    color: #333;
+    font-size: 28rpx;
+}
+
+.y-title__btn--edit::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2rpx;
+    height: 36rpx;
+    margin-left: -16rpx;
+    margin-top: 12rpx;
+    background-color: #d2d2d2;
+}
+
+.y-list .weui-cell__bd.list__item {
+    max-width: 636rpx;
+    border-bottom: none;
+}
+
+.y-list .weui-cell__bd.list__item .list__text {
+    max-width: 430rpx;
+    line-height: 42rpx;
+    color: #666;
+}
+
+.y-list .weui-cell__bd.list__item .list__title {
+    margin: 0;
+}
+
+.y-list .weui-cell {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.list__subtext {
+    display: block;
+    width: 100%;
+    line-height: 48rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.list__money {
+    display: flex;
+    justify-content: flex-end;
+    color: #f00;
+}
+
+.y-account {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80rpx;
+    border-top: 1rpx solid #e8e8ed;
+    line-height: 80rpx;
+    background-color: #fff;
+    font-size: 30rpx;
+}
+
+.y-obligation .weui-check__hd_in-checkbox {
+    margin-top: 0;
+}
+
+.y-list .weui-icon-checkbox_success {
+    margin-top: -30rpx;
+}
+
+.y-account .weui-icon-checkbox_success {
+    margin-top: -20rpx;
+}
+
+.y-account .weui-cell {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.y-account__right {
+    display: flex;
+}
+
+.y-account__total text {
+    display: inline-block;
+    width: 100rpx;
+    color: #f00;
+    font-size: 28rpx;
+}
+
+.y-account__btn {
+    width: 200rpx;
+    margin-left: 50rpx;
+    background-color: #3982e8;
+    color: #fff;
+    text-align: center;
 }

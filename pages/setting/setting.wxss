@@ -1,17 +1,55 @@
 /* pages/setting/setting.wxss */
-page{
+
+page {
     background-color: #fff;
 }
 
-.y-setting .weui-cell{
+.y-setting__item .weui-cell {
     flex-wrap: wrap;
     padding: 30rpx;
 }
 
-.y-explain{
+.y-explain {
     width: 100%;
     box-sizing: border-box;
-    padding-left: 50rpx; 
+    padding-left: 50rpx;
     line-height: 44rpx;
     font-size: 24rpx;
+}
+
+.y-title--setting {
+    margin-top: 20rpx;
+}
+
+.y-title--setting::before {
+    display: none;
+}
+
+.y-invoice {
+    margin-bottom: 50rpx;
+}
+
+.y-invoice .weui-cells {
+    margin-top: 0;
+}
+
+.y-invoice .weui-cell {
+    color: #666;
+    font-size: 28rpx;
+}
+
+.y-invoice .weui-cell__bd {
+    margin: 18rpx 0;
+    border-bottom: 1rpx solid #e8e8ed;
+    min-height: 70rpx;
+    line-height: 70rpx;
+}
+
+.y-invoice.weui-cells::after, .y-invoice.weui-cells::before,
+.y-invoice .weui-cell::before {
+    display: none;
+}
+
+.weui-label--invoice {
+    width: 150rpx;
 }

@@ -1,0 +1,25 @@
+/* pages/c-detail/c-detail.wxss */
+page {
+    background-color: #fff;
+}
+
+
+.y-company__title{
+    padding: 0 66rpx;
+    line-height: 80rpx;
+    border-bottom: 1rpx solid #e8e8ed;
+    font-size: 30rpx;
+    color: #3982e8;
+}
+
+.y-company__title::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 14rpx;
+    height: 14rpx;
+    margin-left: -30rpx;
+    margin-top: 32rpx;
+    border-radius: 50%;
+    border: 3rpx solid #3982e8;
+}

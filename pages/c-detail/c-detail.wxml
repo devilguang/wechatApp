@@ -1,0 +1,23 @@
+<!--pages/c-detail/c-detail.wxml-->
+<view class="y-professor">
+    <!-- 企业基本信息 -->
+    <view class="y-professor__info">
+        <view class="y-professor__info-wrap">
+            <view class="y-professor__img">
+                <image mode="aspectFit" src="../../images/img-home_1.png"></image>
+            </view>
+            <view class="y-professor__text">
+                <view class="y-professor__btn"><button class="y-professor__btn" type="primary" size="mini">编辑主页</button></view>
+                <text class="y-professor__name">{{name}}</text>
+                <text>{{companyName}} | {{position}}</text>
+                <text>{{field}}</text>
+            </view>
+        </view>
+    </view>
+    <view>
+        <view class="y-company__title">企业简介</view>
+        <view class="y-content">
+            {{companyAbout}}
+        </view>
+    </view>
+</view>

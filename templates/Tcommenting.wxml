@@ -5,7 +5,7 @@
             <text class="y-commenting__unit">{{unit}}</text>
             <text>{{contactName}} {{contactPostion}}</text>
         </view>
-        <view class="y-commenting__info">
+        <view class="y-commenting__info y-commenting__info--home">
             <text class="y-commenting__type" wx:if="{{type===0}}">电话约谈\n</text>
             <text class="y-commenting__type" wx:else>线下约谈\n</text>
             <image src="../../images/icon-home_4.png" class="y-commenting__icon--home"></image><text>{{phone}}\n</text>
@@ -49,10 +49,10 @@
             <image src="../../images/icon-home_7.png" wx:if="{{type===1}}" class="y-commenting__icon"></image><text wx:if="{{type===1}}">{{address}}\n</text>
             <image src="../../images/icon-home_6.png" class="y-commenting__icon"></image><text wx:if="{{roleId===2}}">支付报酬{{money}}元</text><text wx:else>获取报酬{{money}}元</text><text class="y-commenting__closing">（已结算）</text>
         </view>
-        <view class="y-commenting__btn-wrap">
+        <!-- <view class="y-commenting__btn-wrap">
             <button wx:if="{{evaluate}}" class="weui-btn mini-btn" type="default" disabled="true" size="mini">已评价</button>
             <button wx:else class="weui-btn mini-btn" type="primary" size="mini">评价</button>
-        </view>
+        </view> -->
     </view>
     
 </template>

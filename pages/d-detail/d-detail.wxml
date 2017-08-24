@@ -14,10 +14,10 @@
                 <image src="{{img}}" mode="aspectFit"></image>
             </view>
             <view class="y-detail__text">
-                <view><text class="y-detail__text--left">技术领域</text>{{field}}</view>
-                <view><text class="y-detail__text--left">关键词</text>{{keyword}}</view>
-                <view><text class="y-detail__text--left">所在地</text>{{addr}}</view>
-                <view><text class="y-detail__text--left">定价</text>{{money}}</view>
+                <view><text class="y-detail__text--left">技术领域</text><text>{{field}}</text></view>
+                <view><text class="y-detail__text--left">关键词</text><text>{{keyword}}</text></view>
+                <view><text class="y-detail__text--left">所在地</text><text>{{addr}}</text></view>
+                <view><text class="y-detail__text--left">定价</text><text>{{money}}</text></view>
             </view>
         </view>
     </view>

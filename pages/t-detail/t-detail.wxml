@@ -14,12 +14,12 @@
                 <image src="{{img}}" mode="aspectFit"></image>
             </view>
             <view class="y-detail__text">
-                <view><text class="y-detail__text--left">专利编号</text>{{patentno}}</view>
+                <view><text class="y-detail__text--left">专利编号</text><text>{{patentno}}</text></view>
                 <view><text class="y-detail__text--left">合作方式</text>
                     <text wx:if="{{cooform}}">技术转让</text>
                 </view>
-                <view><text class="y-detail__text--left">关键词</text>{{keyword}}</view>
-                <view><text class="y-detail__text--left">定价</text>{{money}}</view>
+                <view><text class="y-detail__text--left">关键词</text><text>{{keyword}}</text></view>
+                <view><text class="y-detail__text--left">定价</text><text>{{money}}</text></view>
             </view>
         </view>
     </view>

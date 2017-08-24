@@ -1,10 +1,15 @@
 <!--pages/c-identification/c-identification.wxml-->
-<view class="">
+<view>
+
+    <view class="y-identify__title">
+        <view class="y-identify__foreword">欢迎您</view>
+        <view class="y-identify__subtitle">为了更好的为您服务，请您核实您的基本信息 并填写相关需求，谢谢您的信任！</view>
+    </view>
     <view class="form-identify">
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">姓名</view>
+                    <view class="weui-label weui-label--large">姓名：</view>
                 </view>
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="请输入姓名" />
@@ -12,7 +17,7 @@
             </view>
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">企业</view>
+                    <view class="weui-label weui-label--large">企业：</view>
                 </view>
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="请输入企业" />
@@ -20,7 +25,7 @@
             </view>
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">职务</view>
+                    <view class="weui-label weui-label--large">职务：</view>
                 </view>
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="请输入职务" />
@@ -28,15 +33,15 @@
             </view>
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">地点</view>
+                    <view class="weui-label weui-label--large">地点：</view>
                 </view>
-                <view class="weui-cell__bd">
+                <view class="weui-cell__bd weui-label--large">
                     <input class="weui-input" placeholder="请输入地点" />
                 </view>
             </view>
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">主营业务</view>
+                    <view class="weui-label weui-label--default">主营业务：</view>
                 </view>
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="请输入主营业务" />
@@ -44,7 +49,7 @@
             </view>
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">联系电话</view>
+                    <view class="weui-label weui-label--default">联系电话：</view>
                 </view>
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="请输入联系电话" />
@@ -52,7 +57,7 @@
             </view>
             <view class="weui-cell weui-cell_input">
                 <view class="weui-cell__hd">
-                    <view class="weui-label">统一社会信用码</view>
+                    <view class="weui-label weui-label--mini">统一社会信用码：</view>
                 </view>
                 <view class="weui-cell__bd">
                     <input class="weui-input" placeholder="请输入统一社会信用码" />

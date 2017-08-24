@@ -1,6 +1,6 @@
 <!--pages/setting/setting.wxml-->
 <view class="y-setting">
-    <view class="weui-cells weui-cells_after-title">
+    <view class="weui-cells weui-cells_after-title y-setting__item" wx:if="{{roleId === 1}}">
         <view class="weui-cell" wx:for="{{settingList}}" wx:key="{{item.title}}">
             <view class="weui-cell__hd">
                 <image src="{{item.icon}}" mode="aspectFit" style="margin-right: 5px;margin-top:-3px;vertical-align: middle;width:20px; height: 20px;"></image>
@@ -9,5 +9,159 @@
             <view class="y-explain">{{item.tip}}</view>
         </view>
     </view>
-    <button class="y-btn--large" type="primary">提现</button>
+    <view wx:else>
+        <view class="weui-cells weui-cells_after-title y-setting__item">
+            <view class="weui-cell" wx:for="{{settingCompanyList}}" wx:key="{{item.title}}">
+                <view class="weui-cell__hd">
+                    <image src="{{item.icon}}" mode="aspectFit" style="margin-right: 5px;margin-top:-3px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.title}}</view>
+                <view class="y-explain">{{item.tip}}</view>
+            </view>
+        </view>
+        <form bindsubmit="formSubmit">
+            <view class="y-title y-title--commenting y-title--setting">
+                <view>
+                    <text>发票信息</text>
+                </view>
+                <view class="y-setting__btn">
+                    <button type="primary" size="mini" bindtap="editBtn" wx:if="{{!edit}}">编辑</button>
+                    <button type="primary" size="mini" formType="submit" bindtap="submitBtn" wx:else>完成</button>
+                </view>
+            </view>
+            <view class="weui-cells y-invoice" wx:if="{{edit}}">
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">公司名称：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="companyName" auto-focus/>
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">公司税号：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="dutyParagraph" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">公司地址：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="address" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">开户银行：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="bank" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">银行账号：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="bankNo" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">收票地址：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="invoiceAddress" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">收票人：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="name" />
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">电话：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        <input class="weui-input" name="phone" />
+                    </view>
+                </view>
+            </view>
+            <view class="weui-cells y-invoice" wx:else>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">公司名称：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        公司地址
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">公司税号：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        公司税号
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">公司地址：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        公司地址
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">开户银行：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        开户银行
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">银行账号：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        银行账号
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">收票地址：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        收票地址
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">收票人：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        收票人
+                    </view>
+                </view>
+                <view class="weui-cell weui-cell_input">
+                    <view class="weui-cell__hd">
+                        <view class="weui-label weui-label--invoice">电话：</view>
+                    </view>
+                    <view class="weui-cell__bd">
+                        电话
+                    </view>
+                </view>
+            </view>
+        </form>
+    </view>
+    <button wx:if="{{roleId === 1}}" class="y-btn--large" type="primary">提现</button>
 </view>

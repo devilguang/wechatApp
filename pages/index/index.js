@@ -14,12 +14,12 @@ Page({
             {
                 imgurl: '../../images/icon-home_2.png',
                 text: '找技术',
-                path: '/pages/index/index'
+                path: '/pages/technology/technology'
             },
             {
                 imgurl: '../../images/icon-home_3.png',
                 text: '找需求',
-                path: '/pages/index/index'
+                path: '/pages/demand/demand'
             }
 
         ],

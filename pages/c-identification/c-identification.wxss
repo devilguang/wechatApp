@@ -8,7 +8,26 @@ page{
     margin: 50rpx auto;
     /* border: 1rpx solid #e8e8ed; */
     border-radius: 10rpx;
-    font-size: 28rpx;
+    font-size: 30rpx;
+}
+
+.y-identify__title{
+    width: 80%;
+    margin: 0 auto;
+    padding: 20rpx 0 10rpx;
+    color: #282828;
+
+}
+.y-identify__foreword{
+    margin-bottom: 14rpx;
+    line-height: 60rpx;
+    text-align: center;
+    font-size: 34rpx;
+}
+
+.y-identify__subtitle{
+    line-height: 42rpx;
+    font-size: 24rpx;
 }
 
 .form-identify .weui-cells::after, .form-identify .weui-cells::before{
@@ -18,19 +37,33 @@ page{
 .form-identify .weui-input{
     height: 60rpx;
     padding: 10rpx;
-    border: 1rpx solid #e8e8ed;
+    border: 1rpx solid #cdcdcd;
     box-sizing: border-box;
+    border-radius: 10rpx;
 }
 
 
 .form-identify .weui-cells{
-    font-size: 28rpx;
+    color: #666;
+    font-size: 30rpx;
 }
 
 .form-identify .weui-cell{
-    margin-bottom: 30rpx;
+    margin-bottom: 44rpx;
 }
 
 .form-identify .weui-cell::before{
     display: none;
+}
+
+.weui-label--large{
+    width: 106rpx;
+}
+
+.weui-label--default{
+    width: 170rpx;
+}
+
+.weui-label--mini{
+    width: 254rpx;
 }
