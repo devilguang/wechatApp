@@ -14,6 +14,7 @@
     display: flex;
     justify-content: space-between;
     padding-left: 34rpx;
+    transition: all 0.3;
 }
 
 .y-unconfirmed__item + .y-unconfirmed__item::after {
@@ -154,11 +155,11 @@
 .y-obligation {
     width: 100%;
     height: 100%;
-    margin-bottom: 84rpx;
-    background-color: #fff;
+    margin-bottom: 82rpx;
 }
 
 .y-title__btn--edit {
+    padding:0 6rpx;
     color: #333;
     font-size: 28rpx;
 }
@@ -168,36 +169,52 @@
     position: absolute;
     display: block;
     width: 2rpx;
-    height: 36rpx;
-    margin-left: -16rpx;
-    margin-top: 12rpx;
+    height: 26rpx;
+    margin-left: -24rpx;
+    margin-top: 18rpx;
     background-color: #d2d2d2;
 }
 
+.y-list .weui-cell {
+    height: 244rpx;
+}
+
+.y-list__left {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 242rpx;
+    background-color: #fff;
+    z-index: 5;
+}
+
 .y-list .weui-cell__bd.list__item {
-    max-width: 636rpx;
+    max-width: 684rpx;
+    /* padding-bottom: 9rpx; */
     border-bottom: none;
 }
 
 .y-list .weui-cell__bd.list__item .list__text {
-    max-width: 430rpx;
+    max-width: 488rpx;
     line-height: 42rpx;
     color: #666;
 }
 
 .y-list .weui-cell__bd.list__item .list__title {
     margin: 0;
+    margin-bottom: 6rpx;
 }
 
 .y-list .weui-cell {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
 }
 
 .list__subtext {
     display: block;
     width: 100%;
-    line-height: 48rpx;
+    line-height: 44rpx;
+    font-size: 24rpx;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -207,6 +224,7 @@
     display: flex;
     justify-content: flex-end;
     color: #f00;
+    font-size: 28rpx;
 }
 
 .y-account {
@@ -220,10 +238,16 @@
     line-height: 80rpx;
     background-color: #fff;
     font-size: 30rpx;
+    z-index: 90;
 }
 
 .y-obligation .weui-check__hd_in-checkbox {
     margin-top: 0;
+}
+
+.y-obligation .y-list .weui-check__hd_in-checkbox {
+    margin-top: -44rpx;
+    margin-left: 20rpx;
 }
 
 .y-list .weui-icon-checkbox_success {
@@ -258,17 +282,17 @@
     text-align: center;
 }
 
-.list__btn--delete{
-    display: none;
+.list__btn--delete {
     position: absolute;
     right: 0;
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
-    width: 106rpx;
+    width: 53px;
     height: 242rpx;
-    margin-top: -30rpx;
-    /* margin-left: 72rpx; */
+    /* margin-top: -30rpx; *//* margin-left: 72rpx; */
     background-color: #f00;
     color: #fff;
+    font-size: 28rpx;
+    /* display: none; */
 }

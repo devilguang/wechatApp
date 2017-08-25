@@ -30,6 +30,7 @@ page {
     justify-content: space-between;
     flex-wrap: wrap;
     line-height: 60rpx;
+    background-color: #fff;
     font-size: 30rpx;
 }
 
