@@ -1,5 +1,7 @@
 // pages/collect/collect.js
-var sliderWidth = 112; // 需要设置slider的宽度，用于计算中间位置
+var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
+var app = getApp()
+
 Page({
 
     /**
@@ -85,6 +87,16 @@ Page({
             sliderOffset: e.currentTarget.offsetLeft,
             activeIndex: e.currentTarget.id
         });
+    },
+    // 跳转到详情
+    toDetail: function (e) {
+        app.func.toDetail(e);//调用全局方法
+    },
+    // 预约
+    appointment: function(e){
+        let obj = e.currentTarget.dataset.obj, type = Number(e.currentTarget.dataset.type)
+        console.log(obj, type)
+        app.func.appointment(obj,type);//调用全局方法
     },
     /**
      * 生命周期函数--监听页面加载

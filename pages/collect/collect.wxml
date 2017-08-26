@@ -27,7 +27,7 @@
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                    <view class="y-list">
                         <block wx:for="{{technologyList}}" wx:key="{{item.id}}">
-                            <template is="collectItem" data="{{...item}}"></template>
+                            <template is="collectTItem" data="{{...item}}"></template>
                         </block>
                     </view>
                 </view>
@@ -35,7 +35,7 @@
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                     <view class="y-list">
                         <block wx:for="{{demandList}}" wx:key="{{item.id}}">
-                            <template is="collectItem" data="{{...item}}"></template>
+                            <template is="collectDItem" data="{{...item}}"></template>
                         </block>
                     </view>
                 </view>

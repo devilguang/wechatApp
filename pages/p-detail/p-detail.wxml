@@ -8,18 +8,21 @@
             </view>
             <view class="y-professor__text" wx:if="{{myself}}">
                 <view class="y-professor__btn"><button class="y-professor__btn" type="primary" size="mini">编辑主页</button></view>
-                <text class="y-professor__name">{{name}}</text>
-                <text>{{professionalTitle}} | {{region}}</text>
-                <text>{{college}}</text>
+                <text class="y-professor__name">{{professor.name}}</text>
+                <text>{{professor.professionalTitle}} | {{professor.region}}</text>
+                <text>{{professor.college}}</text>
             </view>
             <view class="y-professor__text y-professor__text--list" wx:else>
                 <view class="y-professor__btn">
                     <text></text>
-                    <button class="y-professor__collect"><image src="../../images/icon-collect_1.png"></image></button>
+                    <button class="y-professor__collect" data-obj="{{professor}}" bindtap="collect">
+                        <image src="../../images/icon-collect_1.png" wx:if="{{!professor.isCollect}}"></image>
+                        <image src="../../images/icon-collect_2.png" wx:else></image>
+                    </button>
                 </view>
-                <text class="y-professor__name">{{name}}</text>
-                <text>{{professionalTitle}} | {{region}}</text>
-                <text>{{college}}</text>
+                <text class="y-professor__name">{{professor.name}}</text>
+                <text>{{professor.professionalTitle}} | {{professor.region}}</text>
+                <text>{{professor.college}}</text>
             </view>
         </view>
     </view>
@@ -40,19 +43,19 @@
                 <!-- 个人简介 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                     <view class="y-content">
-                        {{brief}}
+                        {{professor.brief}}
                     </view>
                 </view>
                 <!-- 研究领域 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                     <view class="y-content">
-                        {{researchField}}
+                        {{professor.researchField}}
                     </view>
                 </view>
                 <!-- 研究论文 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                     <view class="y-list">
-                        <view class="y-paper__item" wx:for="{{paperList}}" wx:key="{{item.title}}">
+                        <view class="y-paper__item" wx:for="{{professor.paperList}}" wx:key="{{item.title}}">
                             <text class="y-paper__title">{{item.title}}</text>
                             <text>作者：{{item.author}}</text>
                         </view>
@@ -61,11 +64,11 @@
                 <!-- 项目成果 -->
                 <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
                     <view class="y-content">
-                        {{result}}
+                        {{professor.result}}
                     </view>
                 </view>
             </view>
         </view>
     </view>
-    <button wx:if="{{!myself}}" class="y-btn--large" type="primary">立即联系</button>
+    <button wx:if="{{!myself}}" class="y-btn--large" data-obj="{{professor}}" bindtap="appointment" type="primary">立即联系</button>
 </view>

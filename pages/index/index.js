@@ -1,6 +1,6 @@
 //index.js
 
-var sliderWidth = 112; // 需要设置slider的宽度，用于计算中间位置
+var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 //获取应用实例
 var app = getApp()
 Page({

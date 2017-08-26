@@ -2,36 +2,39 @@
 <view class="y-detail">
     <view class="y-detail__info">
         <view class="y-detail__name" wx:if="{{!myself}}">
-            <text>{{title}}</text>
-            <button class="y-detail__collect"><image src="../../images/icon-collect_1.png"></image></button>
+            <text>{{demandDetail.title}}</text>
+            <button class="y-detail__collect" data-obj="{{demandDetail}}" bindtap="collect">
+                <image src="../../images/icon-collect_2.png" wx:if="{{demandDetail.isCollect}}"></image>
+                <image src="../../images/icon-collect_1.png" wx:else></image>
+            </button>
         </view>
         <view class="y-detail__name" wx:else>
-            <text>{{title}}</text>
+            <text>{{demandDetail.title}}</text>
             <button class="y-detail__edit" type="primary" size="mini">编辑</button>
         </view>
         <view class="y-detail__con">
             <view class="y-detail__img">
-                <image src="{{img}}" mode="aspectFit"></image>
+                <image src="{{demandDetail.img}}" mode="aspectFit"></image>
             </view>
             <view class="y-detail__text">
-                <view><text class="y-detail__text--left">技术领域</text><text>{{field}}</text></view>
-                <view><text class="y-detail__text--left">关键词</text><text>{{keyword}}</text></view>
-                <view><text class="y-detail__text--left">所在地</text><text>{{addr}}</text></view>
-                <view><text class="y-detail__text--left">定价</text><text>{{money}}</text></view>
+                <view><text class="y-detail__text--left">技术领域</text><text>{{demandDetail.field}}</text></view>
+                <view><text class="y-detail__text--left">关键词</text><text>{{demandDetail.keyword}}</text></view>
+                <view><text class="y-detail__text--left">所在地</text><text>{{demandDetail.addr}}</text></view>
+                <view><text class="y-detail__text--left">定价</text><text>{{demandDetail.money}}</text></view>
             </view>
         </view>
     </view>
     <view class="y-detail__item">
         <view class="y-detail__title">需求简介</view>
         <view class="y-content">
-            {{intro}}
+            {{demandDetail.intro}}
         </view>
     </view>
     <view class="y-detail__item">
         <view class="y-detail__title">企业信息</view>
         <view class="y-content">
-            {{companyInfo}}
+            {{demandDetail.companyInfo}}
         </view>
     </view>
-    <button wx:if="{{!myself}}" class="y-btn--large" type="primary">立即联系</button>
+    <button wx:if="{{!myself}}" class="y-btn--large" data-obj="{{demandDetail}}" bindtap="appointment" type="primary">立即联系</button>
 </view>

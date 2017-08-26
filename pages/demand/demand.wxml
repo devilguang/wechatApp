@@ -29,7 +29,7 @@
     </view>
     <view class="y-list--center" bindtap="showCheckBox">
         <block wx:for="{{list}}" wx:key="{{item.id}}">
-            <template is="listItem" data="{{...item}}"></template>
+            <template is="listDItem" data="{{...item}}"></template>
         </block>
     </view>
 </view>

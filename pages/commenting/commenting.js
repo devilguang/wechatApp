@@ -1,5 +1,5 @@
 // pages/commenting/commenting.js
-var sliderWidth = 114; // 需要设置slider的宽度，用于计算中间位置
+var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
 
 Page({
 
@@ -14,8 +14,8 @@ Page({
         activeIndex: 0,
         sliderOffset: 0,
         sliderLeft: 0,
-        time: 'drop',
-        money: 'litre',
+        time: '',
+        money: '',
         edit: false,
         editProfessor: false,
         startX: '0',
@@ -196,6 +196,7 @@ Page({
             }
         ]
     },
+    // tab切换
     tabClick: function (e) {
         this.setData({
             sliderOffset: e.currentTarget.offsetLeft,
@@ -501,6 +502,44 @@ Page({
             }
         });
 
+    },
+    // 结算
+    account: function () {
+        if (this.data.accountMoney > 0) {
+
+            let currentDate = Number(new Date());
+            wx.showModal({
+                content: '有人智库对专家信息的真实有效性负责，若付款成功后无法联系专家，系统将全额退款给用户',
+                showCancel: false,
+                success: function (res) {
+                    if (res.confirm) {
+                        // 支付
+                        // wx.requestPayment(
+                        //     {
+                        //         'timeStamp': currentDate,
+                        //         'nonceStr': '',
+                        //         'package': '',
+                        //         'signType': 'MD5',
+                        //         'paySign': '',
+                        //         'success': function (res) { },
+                        //         'fail': function (res) { },
+                        //         'complete': function (res) { }
+                        //     })
+                    }
+                }
+            });
+
+        } else {
+            wx.showModal({
+                content: '还未选择需结算的沟通或约见，请先选择需结算的沟通或约见',
+                showCancel: false,
+                success: function (res) {
+                    if (res.confirm) {
+
+                    }
+                }
+            });
+        }
     },
     /**
      * 生命周期函数--监听页面加载

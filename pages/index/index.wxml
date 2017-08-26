@@ -42,7 +42,7 @@
             </view>
             <view class="weui-tab__panel">
                 <!-- 政策资讯 -->
-                <view class="weui-tab__content" hidden="{{activeIndex !=0 }}">
+                <view class="weui-tab__content" style="padding-top: 10rpx;" hidden="{{activeIndex !=0 }}">
                     <view class="y-news__item" wx:for="{{newsList}}" wx:key="index">
                         <view class="y-news__img">
                             <image src="{{item.img}}"></image>
@@ -54,7 +54,7 @@
                     </view>
                 </view>
                 <!-- 智库 -->
-                <view class="weui-tab__content" hidden="{{activeIndex !=1 }}">
+                <view class="weui-tab__content" style="padding-top: 10rpx;" hidden="{{activeIndex !=1 }}">
                     <text class="y-pic__title">热门高校</text>
                     <view class="y-pic">
                         <view class="y-pic__item" wx:for="{{collegeList}}" wx:key="index">

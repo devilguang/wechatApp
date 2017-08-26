@@ -2,39 +2,42 @@
 <view class="y-detail">
     <view class="y-detail__info">
         <view class="y-detail__name" wx:if="{{!myself}}">
-            <text>{{title}}</text>
-            <button class="y-detail__collect"><image src="../../images/icon-collect_1.png"></image></button>
+            <text>{{technologyInfo.title}}</text>
+            <button class="y-detail__collect" data-obj="{{technologyInfo}}" bindtap="collect">
+                <image src="../../images/icon-collect_2.png" wx:if="{{technologyInfo.isCollect}}"></image>
+                <image src="../../images/icon-collect_1.png" wx:else></image>
+            </button>
         </view>
         <view class="y-detail__name" wx:else>
-            <text>{{title}}</text>
+            <text>{{technologyInfo.title}}</text>
             <button class="y-detail__edit" type="primary" size="mini">编辑</button>
         </view>
         <view class="y-detail__con">
             <view class="y-detail__img">
-                <image src="{{img}}" mode="aspectFit"></image>
+                <image src="{{technologyInfo.img}}" mode="aspectFit"></image>
             </view>
             <view class="y-detail__text">
-                <view><text class="y-detail__text--left">专利编号</text><text>{{patentno}}</text></view>
+                <view><text class="y-detail__text--left">专利编号</text><text>{{technologyInfo.patentno}}</text></view>
                 <view><text class="y-detail__text--left">合作方式</text>
-                    <text wx:if="{{cooform}}">技术转让</text>
+                    <text wx:if="{{technologyInfo.cooform}}">技术转让</text>
                 </view>
-                <view><text class="y-detail__text--left">关键词</text><text>{{keyword}}</text></view>
-                <view><text class="y-detail__text--left">定价</text><text>{{money}}</text></view>
+                <view><text class="y-detail__text--left">关键词</text><text>{{technologyInfo.keyword}}</text></view>
+                <view><text class="y-detail__text--left">定价</text><text>{{technologyInfo.money}}</text></view>
             </view>
         </view>
     </view>
     <view class="y-detail__item">
         <view class="y-detail__title">技术介绍</view>
         <view class="y-content">
-            {{technologyDetail}}
+            {{technologyInfo.technologyDetail}}
         </view>
     </view>
     <view class="y-detail__item">
         <view class="y-detail__title">专利详情</view>
         <view class="y-content">
-            <text>专利号：{{patentno}}\n</text>
-            <text>专利所有者：{{owner}}\n</text>
+            <text>专利号：{{technologyInfo.patentno}}\n</text>
+            <text>专利所有者：{{technologyInfo.owner}}\n</text>
         </view>
     </view>
-    <button wx:if="{{!myself}}" class="y-btn--large" type="primary">立即联系</button>
+    <button wx:if="{{!myself}}" class="y-btn--large" data-obj="{{technologyInfo}}" bindtap="appointment"  type="primary">立即联系</button>
 </view>

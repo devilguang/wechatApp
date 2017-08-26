@@ -1,5 +1,6 @@
 //app.js
-var http = require('service/http.js')
+var http = require('service/http.js');
+var publicFun = require('service/publicFun.js');
 
 App({
     getUserInfo: function (cb) {
@@ -23,6 +24,9 @@ App({
         userInfo: null
     },
     func: {
-        req: http.req
+        req: http.req,
+        collect: publicFun.collect,
+        appointment: publicFun.appointment,
+        toDetail: publicFun.toDetail
     }
 })

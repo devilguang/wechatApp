@@ -178,6 +178,9 @@
 .y-list .weui-cell {
     height: 244rpx;
 }
+.y-list .weui-cell::before {
+    background-color: #e8e8ed;
+}
 
 .y-list__left {
     position: absolute;
@@ -191,6 +194,7 @@
 
 .y-list .weui-cell__bd.list__item {
     max-width: 684rpx;
+    padding: 0;
     /* padding-bottom: 9rpx; */
     border-bottom: none;
 }

@@ -146,7 +146,7 @@
                         </checkbox-group>
                         <view class="y-account__right">
                             <view class="y-account__total">合计：<text>￥{{accountMoney}}</text></view>
-                            <view class="y-account__btn">结算({{accountMoney}}元)</view>
+                            <view class="y-account__btn" bindtap="account">结算({{accountMoney}}元)</view>
                         </view>
                     </view>
                 </view>

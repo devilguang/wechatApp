@@ -77,7 +77,8 @@ page, .page, .page__bd {
 }
 
 .weui-tab__content {
-    padding-top: 10rpx;
+     padding-top: 0; 
+    /* padding-top: 10rpx; */
 }
 
 .weui-navbar__item.weui-bar__item_on {
@@ -85,16 +86,20 @@ page, .page, .page__bd {
 }
 
 .weui-navbar__slider {
+    width:96px;
     height: 4rpx;
     background-color: #3982e8;
 }
 
 /* list */
+.y-list, .y-list--center{
+    background-color: #fff;
+}
 
-.y-list--center {
+/* .y-list--center {
     width: 92%;
     padding: 0 4%;
-}
+} */
 
 .y-list + .y-title {
     border-top: 20rpx solid #e8e8ed;
@@ -120,6 +125,7 @@ button[type="primary"] {
     position: fixed;
     bottom: 0;
     width: 100%;
+    border-top:20rpx solid #fff;
     border-radius: 0;
     font-size: 32rpx;
 }
@@ -455,6 +461,8 @@ button.y-detail__collect::after {
 }
 
 .y-professor__text text.y-professor__name {
+    position: relative;
+    z-index: 9;
     margin-top: -2rpx;
     line-height: 60rpx;
     color: #3982e8;
@@ -467,6 +475,8 @@ button.y-detail__collect::after {
 }
 
 .y-professor__btn {
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content: flex-end;
 }

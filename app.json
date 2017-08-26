@@ -1,10 +1,9 @@
-
 {
     "pages": [  
-        "pages/commenting/commenting",
         
         "pages/index/index",
         "pages/recommend/recommend",
+        "pages/commenting/commenting",
         "pages/myself/myself",
 
         "pages/search/search",
@@ -21,10 +20,10 @@
         "pages/m-technology/m-technology",
         "pages/m-demand/m-demand",
 
-        "pages/p-detail/p-detail",
-        "pages/c-detail/c-detail",
         "pages/t-detail/t-detail",
+        "pages/p-detail/p-detail",
         "pages/d-detail/d-detail",
+        "pages/c-detail/c-detail",
         
         "pages/linkman/linkman",
         "pages/collect/collect",
