@@ -541,6 +541,34 @@ Page({
             });
         }
     },
+    // 时间排序
+    filtrate: function (e) {
+        let Datafiltrate = e.currentTarget.dataset.filtrate, currenFiltrate = this.data[Datafiltrate], filtrate = ''
+
+        if (currenFiltrate === '') {
+            filtrate = 'drop'
+        } else if (currenFiltrate === 'drop') {
+            filtrate = 'litre'
+        } else if (currenFiltrate === 'litre') {
+            filtrate = ''
+        } else {
+            console.log('出现未知错误')
+        }
+        
+        if (Datafiltrate === 'time') {
+            this.setData({
+                time: filtrate,
+                money: ''
+            })
+        } else {
+            this.setData({
+                time: '',
+                money: filtrate
+            })
+        }
+
+    },
+
     /**
      * 生命周期函数--监听页面加载
      */

@@ -7,11 +7,6 @@
             <picker class="y-search__addr" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
                 <text>{{addr}}</text>
             </picker>
-            <!-- <picker class="y-search__field" mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
-                <view class="y-search__item">
-                    当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
-                </view>
-            </picker> -->
             <view class="y-search__field" bindtap="showCheckBox">{{fieldStr}}</view>
             <button class="y-search__btn--form" type="primary" size="mini">搜索</button>
         </view>
@@ -27,9 +22,10 @@
             </checkbox-group>
         </view>
     </view>
-    <view class="y-list--center" bindtap="showCheckBox">
+    <view class="y-list--center">
         <block wx:for="{{list}}" wx:key="{{item.id}}">
             <template is="professItem" data="{{...item}}"></template>
         </block>
     </view>
+    <view class="mark" wx:if="{{show}}" bindtap="showCheckBox"></view>
 </view>

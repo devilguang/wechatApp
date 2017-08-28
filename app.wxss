@@ -96,13 +96,22 @@ page, .page, .page__bd {
     background-color: #fff;
 }
 
-/* .y-list--center {
-    width: 92%;
-    padding: 0 4%;
-} */
+ .y-list--center {
+    position: relative;
+    z-index: 9;
+} 
 
 .y-list + .y-title {
     border-top: 20rpx solid #e8e8ed;
+}
+
+.mark{
+    position: fixed;
+    top: 80rpx;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    z-index: 10;
 }
 
 /* btn */
@@ -298,6 +307,7 @@ button.y-detail__collect::after {
     padding: 20rpx 0;
     border-bottom: 1rpx solid #d2d2d2;
     background-color: #fff;
+    z-index: 11;
 }
 
 .y-form + .y-list--center {
@@ -364,10 +374,11 @@ button.y-detail__collect::after {
     right: 0;
     width: 90%;
     margin: 0 auto;
-    padding: 10rpx;
+    padding: 10rpx 10rpx 30rpx;
     border: 1rpx solid #dedede;
     background-color: #fff;
     box-sizing: border-box;
+    z-index: 12;
 }
 
 .field-list .weui-check__hd_in-checkbox {

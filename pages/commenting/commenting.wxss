@@ -150,6 +150,11 @@
     border-top-color: #3982e8;
 }
 
+.y-commenting__filtrate--litre,
+.y-commenting__filtrate--drop{
+    color: #3982e8;
+}
+
 /* y-obligation */
 
 .y-obligation {

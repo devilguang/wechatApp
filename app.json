@@ -1,12 +1,13 @@
 {
     "pages": [  
-        
+        "pages/linkman/linkman",
         "pages/index/index",
         "pages/recommend/recommend",
         "pages/commenting/commenting",
         "pages/myself/myself",
 
         "pages/search/search",
+        "pages/news-detail/news-detail",
 
         "pages/login/login",
         "pages/attention/attention",
@@ -25,7 +26,7 @@
         "pages/d-detail/d-detail",
         "pages/c-detail/c-detail",
         
-        "pages/linkman/linkman",
+        
         "pages/collect/collect",
         "pages/setting/setting",
         

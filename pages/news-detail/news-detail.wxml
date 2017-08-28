@@ -1,0 +1,187 @@
+<!--pages/news-detail/news-detail.wxml-->
+<view class="page__bd">
+    <view class="weui-article" wx:if="{{id==1}}">
+        <view class="weui-article__h1">武汉麦达AI团队全程保障湖北技交所“企业高校院所行”</view>
+        <view class="news-detail__remank">
+            <view>发布时间：2017-06-27 17:42</view>
+            <view>
+                来源：
+                <navigator url="/pages/index/index" class="weui-footer__link">有人智库</navigator>
+            </view>
+        </view>
+        <view class="weui-article__section">
+            <view class="weui-article__p">
+                6月25日，由湖北省科技厅，湖北省技术交易所主办的首场“企业高校院所行”，汽车与新材料专场在武汉理工大学顺利举行，武汉麦达AI团队全程保障，针对企业实际需求和专家科研情况形成精准匹配，协助湖北技术交易所和武汉理工大学共建长效合作机制，共同助推理工大产学研工作。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news_1.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                湖北省科技厅科技成果处和各地市州科技局负责人，高校和科研院所专家团队，企业、技术转移服务机构代表等200余人与会。会上，湖北省科技厅副厅长葛琳和武汉理工大学副校长陈文并共同为“湖北技术交易所武汉理工大学分站”揭牌。随后，武汉理工大学汽车和新材料领域黄妙华、彭勇、陈伟等三位教授在此次活动中分享了精彩的科技创新前沿动态，分别发表了主题为 “汽车轻量化电动化智能化技术”、“第三代太阳能电池——一种能够用的起的光伏发电技术”、“建筑材料绿色制造及战略新型材料”的精彩演讲。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news_2.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                当天，包括武汉理工大学机电工程学院副院长卢红教授，国务院特殊津贴享受者、武汉理工大学材料科学与工程学院毛杰华教授在内的31位行业资深专家与70余家有技术需求的企业积极进行了“一对一”深入洽谈。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news_3.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                最终，湖北金牛管业有限公司等4家企业与专家签订了合作协议，11家企业与专家达成了合作意向。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news_4.jpg" mode="aspectFit"></image>
+            </view>
+        </view>
+    </view>
+    <view class="weui-article" wx:if="{{id==2}}">
+        <view class="weui-article__h1">麦达AI团队全程保障 “企业高校院所行”民大专场</view>
+        <view class="news-detail__remank">
+            <view>发布时间：2017-07-19 17:02</view>
+            <view>
+                来源：
+                <navigator url="/pages/index/index" class="weui-footer__link">有人智库</navigator>
+            </view>
+        </view>
+        <view class="weui-article__section">
+            <view class="weui-article__p">
+                6月29日，由湖北省科技厅，湖北省技术交易所主办的第二场“企业高校院所行”，化工与医药专场在中南民族大学顺利举行，武汉麦达AI团队全程保障，针对企业实际需求和专家科研情况形成精准匹配，协助湖北技术交易所和中南民族大学共建长效合作机制，打通高校企业产学研合作"最后一公里"。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news2-1.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                湖北省科技厅科技成果处和各地市州科技局负责人，高校和科研院所专家团队，企业、技术转移服务机构代表与会。会上，湖北省科技厅副厅长杜耘和中南民族大学校长李金林并共同为“湖北技术交易所中南民族大学分站”揭牌。
+
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news2-2.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                随后，中南民族大学民族药物研究院院长、二级教授、博士生导师梅之南会上作主旨演讲，在此次活动中分享了精彩的科技创新前沿动态，发表了主题为“中医药健康产业创新发展湖北之路探析”的精彩演讲。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news2-3.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                当天，包括国家“973”首席科学家、中国中医科学院中药研究所首席研究员、诺贝尔奖青蒿素原始研发团队成员之一、药理毒理学专家、政府特殊津贴专家叶祖光在内的26位行业资深专家与70余家有技术需求的企业积极进行了“一对一”深入洽谈。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news2-4.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                最终，中南民族大学专场共达成意向需求67条，10家企业当场签约。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news2-5.jpg" mode="aspectFit"></image>
+            </view>
+        </view>
+    </view>
+    <view class="weui-article" wx:if="{{id==3}}">
+        <view class="weui-article__h1">麦达AI技术助力湖北农业，促进基础产业大发展</view>
+        <view class="news-detail__remank">
+            <view>发布时间：2017-07-19 17:22</view>
+            <view>
+                来源：
+                <navigator url="/pages/index/index" class="weui-footer__link">有人智库</navigator>
+            </view>
+        </view>
+        <view class="weui-article__section">
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news3_1.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                7月2日，由湖北省科技厅、湖北省技术交易所主办，武汉麦达AI团队全程助力的第3场“企业高校院所行”，农业与轻工食品专场在湖北省农业科学院顺利举行，针对企业实际需求和专家科研情况形成精准匹配，加快促进我省农业经济发展。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news3_2.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                湖北省科技厅科技成果处和各地市州科技局负责人，高校和科研院所专家团队，企业、技术转移服务机构代表共300余人与会。会上，湖北省科技厅副厅长葛琳和湖北省农业科学院副院长余锦平并共同为“湖北技术交易所湖北省农业科学院分站”揭牌。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news3_3.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                随后，湖北省农科院游艾青、姚明华、熊光权分别作主旨演讲，在此次活动中分享了精彩的科技创新前沿动态，其中，省农业科学院游艾青专家发表了主题为“优质高产高效粮食作物新品种与新技术”的精彩演讲。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news3_4.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                当天，包括湖北省农业科学院农产品加工与核农技术研究所副所长熊光权，华中农业大学植物框架学院药用植物研究所教授、药用植物教研室主任、楚天学者特聘教授胡学博，中南民族大学药物研究院院长、国家“万人计划”科技创新领军人才梅之南在内的54个专家团队为110余家企业的技术难题把脉坐诊，进行“一对一”深入洽谈。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news3_5.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                最终，经过企业专家“一对一”洽谈，最终荆门、十堰、恩施等地的21家企业现场与专家签订了合作协议，近100家企业与专家达成了合作意向。
+            </view>
+        </view>
+    </view>
+    <view class="weui-article" wx:if="{{id==4}}">
+        <view class="weui-article__h1">热烈庆祝[有人智库]助力“企业高校院所行”系列活动圆满谢幕</view>
+        <view class="news-detail__remank">
+            <view>发布时间：2017-07-19 17:42</view>
+            <view>
+                来源：
+                <navigator url="/pages/index/index" class="weui-footer__link">有人智库</navigator>
+            </view>
+        </view>
+        <view class="weui-article__section">
+            <view class="weui-article__title">【华科专场】</view>
+            <view class="weui-article__p">
+                7月5日，由湖北省科技厅，湖北省技术交易所主办，武汉麦达[有人智库]助力的最后一场“企业高校院所行”，先进制造与能源综合专场在华中科技大学顺利举行，武汉麦达AI团队全程保障，针对企业实际需求和专家科研情况形成精准匹配，协助湖北技术交易所和华中科技大学共建长效合作机制，打通科研院所与企业合作之间的"最后一公里"。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_1.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                此次活动由湖北省科技厅、湖北省国防科学技术工业办公室主办，华中科技大学、湖北技术交易所、湖北省技术市场协会及湖北省对外科技交流中心承办，省科技厅科技成果处和各地市州科技局负责人，高校和科研院所专家团队，武汉麦达电子有限公司AI团队，企业、技术转移服务机构以及新闻媒体代表共350余人参加了活动。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_2.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                会上，省科技厅党组书记张盛仁、湖北省国防科学技术工业办公室副主任周峰、华中科技大学副校长骆清铭参加会议并致辞。湖北省科技厅党组书记张盛仁和华中科技大学副校长骆清铭共同为“湖北技术交易所华中科技大学分站”揭牌。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_3.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                随后，华中科技大学机械科学与工程学院、数字制造装备与技术国家重点实验室许剑锋教授，发表了主题为“智能制造与机器人应用”的精彩演讲。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_4.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__p">
+                华中科技大学自动化学院桑农教授，发表了主题为“监控视频智能分析前沿技术及应用”的精彩演讲。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_5.jpg" mode="aspectFit"></image>
+            </view>
+            <view class="weui-article__title">【活动回顾】</view>
+            <view class="weui-article__p">
+                从6月25日开始，[有人智库]助力“企业高校院所行”活动按技术领域依次在武汉理工大学、中南民族大学、湖北省农业科学院、华中科技大学举行。活动从企业的技术需求出发，以湖北技术交易所分站揭牌、知名专家分享科技创新前沿动态、企业与专家“一对一”洽谈为主题。四场专场活动共有161个专家团队为400余家企业的技术难题“把脉坐诊”，专家团队集结了华中科技大学、武汉理工大学、湖北省农科院、华中农业大学、中南民族大学、湖北工业大学、武汉轻工大学和武汉工程大学的行业大拿。通过企业与专家“一对一”洽谈，最终，四场系列活动促使荆门、鄂州、十堰、恩施、潜江等地的45家企业与专家现场签订了合作协议，238家企业与专家达成了合作意向，共计1100余人参加了活动。
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news_2.jpg" mode="aspectFit"></image>
+                <text>第一场 武汉理工大学---汽车与新材料专场</text>
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_6.jpg" mode="aspectFit"></image>
+                <text>第二场 中南民族大学---化工与医药专场</text>
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_7.jpg" mode="aspectFit"></image>
+                <text>第三场 湖北省农业科学院---农业与轻工食品专场</text>
+            </view>
+            <view class="page__img">
+                <image src="http://www.youren.ai/static/imgs/img-news4_8.jpg" mode="aspectFit"></image>
+                <text>第四场 华中科技大学---先进制造与能源综合专场</text>
+            </view>
+        </view>
+    </view>
+</view>

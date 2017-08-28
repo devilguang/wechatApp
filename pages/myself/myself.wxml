@@ -10,7 +10,7 @@
         </view>
     </view>
     <view class="weui-cells weui-cells_after-title">
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="/pages/linkman/linkman" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
                 <image src="../../images/icon-myself_1.png" style="margin-right: 18rpx;vertical-align: middle;width:20px; height: 20px;"></image>
             </view>
@@ -53,7 +53,7 @@
         </navigator>
     </view>
     <view class="weui-cells">
-        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <navigator url="/pages/setting/setting" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
             <view class="weui-cell__hd">
                 <image src="../../images/icon-myself_6.png" style="margin-right: 18rpx;vertical-align: middle;width:20px; height: 20px;"></image>
             </view>

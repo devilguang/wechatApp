@@ -174,12 +174,12 @@
             <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
                 <view class="y-list">
                     <view class="y-title y-commenting__filtrate-wrap">
-                        <view class="y-commenting__filtrate y-commenting__filtrate--litre" wx:if="{{time ==='litre' }}">时间</view>
-                        <view class="y-commenting__filtrate y-commenting__filtrate--drop" wx:if="{{time ==='drop' }}">时间</view>
-                        <view class="y-commenting__filtrate" wx:if="{{time !=='drop' && time !=='litre' }}">时间</view>
-                        <view class="y-commenting__filtrate y-commenting__filtrate--litre" wx:if="{{money ==='litre' }}">金额</view>
-                        <view class="y-commenting__filtrate y-commenting__filtrate--drop" wx:if="{{money ==='drop' }}">金额</view>
-                        <view class="y-commenting__filtrate" wx:if="{{money !=='drop' && money!=='litre' }}">金额</view>
+                        <view class="y-commenting__filtrate y-commenting__filtrate--litre" data-filtrate="time" bindtap="filtrate" wx:if="{{time ==='litre' }}">时间</view>
+                        <view class="y-commenting__filtrate y-commenting__filtrate--drop" data-filtrate="time" bindtap="filtrate" wx:if="{{time ==='drop' }}">时间</view>
+                        <view class="y-commenting__filtrate" data-filtrate="time" bindtap="filtrate" wx:if="{{time !=='drop' && time !=='litre' }}">时间</view>
+                        <view class="y-commenting__filtrate y-commenting__filtrate--litre" data-filtrate="money" bindtap="filtrate" wx:if="{{money ==='litre' }}">金额</view>
+                        <view class="y-commenting__filtrate y-commenting__filtrate--drop" data-filtrate="money" bindtap="filtrate" wx:if="{{money ==='drop' }}">金额</view>
+                        <view class="y-commenting__filtrate" data-filtrate="money" bindtap="filtrate" wx:if="{{money !=='drop' && money!=='litre' }}">金额</view>
                     </view>
                     <view class="y-list">
                         <block wx:for="{{commentedList}}" wx:key="{{item.id}}">

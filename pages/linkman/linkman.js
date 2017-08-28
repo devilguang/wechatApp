@@ -48,8 +48,20 @@ Page({
             linkmanList: list
         })
     },
+    // 修改联系人
     formSubmit: function (e) {
         console.log(e.detail)
+        let detail = e.detail.value;
+
+        let keys = Object.keys(detail)
+        let values = []
+
+        keys.forEach(key => {
+            let [name, index] = key.split('_')
+            values[index] = values[index] || {}
+            values[index][name] = detail[key]
+        })
+
     },
     commit: function () {
         this.setData({

@@ -29,10 +29,10 @@
             <view class="y-linkman">
                 <view class="y-linkman__item" wx:for="{{linkmanList}}" wx:key="{{item.phone}}">
                     <view class="y-linkman__text y-linkman__text--input">
-                        <view>姓名：<input class="weui-input" name="name" value="{{item.name}}" placeholder="请输入姓名" /></view>
-                        <view>电话：<input class="weui-input" name="phone" value="{{item.phone}}" placeholder="请输入电话" /></view>
-                        <view>邮箱：<input class="weui-input" name="email" value="{{item.email}}" placeholder="请输入邮件" /></view>
-                        <view>职位：<input class="weui-input" name="position" value="{{item.position}}" placeholder="请输入职位" /></view>
+                        <view>姓名：<input class="weui-input" name="name_{{index}}" value="{{item.name}}" placeholder="请输入姓名" /></view>
+                        <view>电话：<input class="weui-input" name="phone_{{index}}" value="{{item.phone}}" placeholder="请输入电话" /></view>
+                        <view>邮箱：<input class="weui-input" name="email_{{index}}" value="{{item.email}}" placeholder="请输入邮件" /></view>
+                        <view>职位：<input class="weui-input" name="position_{{index}}" value="{{item.position}}" placeholder="请输入职位" /></view>
                     </view>
                 </view>
             </view>
