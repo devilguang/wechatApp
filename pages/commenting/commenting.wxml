@@ -25,7 +25,7 @@
             <!-- 待确认/待付款 -->
             <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                 <!-- 待确认 -->
-                <view wx:if="{{roldId===1}}">
+                <view wx:if="{{roleId===1}}">
                     <view class="y-title y-title--commenting">
                         <view>
                             <image class="y-title__icon" src="../../images/icon-commenting_1.png"></image><text>我感兴趣的</text>
@@ -34,7 +34,7 @@
                     <view class="y-list">
                         <view class="y-unconfirmed__item" wx:for="{{unconfirmedList}}" wx:key="{{item.id}}">
                             <view class="y-unconfirmed__content">
-                                <text class="y-unconfirmed__title">{{item.title}}</text>
+                                <navigator url="/pages/d-detail/d-detail?id={{item.id}}" class="y-unconfirmed__title">{{item.title}}</navigator>
                                 <text class="y-unconfirmed__brief">{{item.brief}}</text>
                                 <text class="y-unconfirmed__remark">{{item.date}}发送</text>
                             </view>
@@ -84,25 +84,25 @@
                     </view>
                     <checkbox-group class="y-list" data-list="demand" bindchange="checkboxChange">
                         <label class="weui-cell weui-check__label" wx:for="{{list}}" wx:key="{{item.id}}">
-                                <view class="y-list__left" style="{{item.txtStyle}}">
-                                    <checkbox class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
-                                    <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                                        <icon class="weui-icon-checkbox_success" type="success_no_circle" size="16" wx:if="{{item.checked}}"></icon>
-                                    </view>
-                                    <view class="weui-cell__bd list__item">
-                                        <view class="list__content list__content--professor" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-list="demand" data-index="{{index}}" >
-                                            <view class="list__img"><image src="{{item.img}}" mode="aspectFit"></image></view>
-                                            <view class="list__text list__text--professor-item">
-                                                <view class="list__title list__title--professor">{{item.name}} {{item.college}} {{item.professionalTitle}}</view>
-                                                <text class="list__subtext">方向：{{item.direction}}</text>
-                                                <text class="list__subtext">行业：{{item.field}}</text>
-                                                <view class="list__money">￥{{item.money}}</view>
-                                            </view>
-                                        </view>  
-                                    </view>  
+                            <view class="y-list__left" style="{{item.txtStyle}}">
+                                <checkbox class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
+                                <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                                    <icon class="weui-icon-checkbox_success" type="success_no_circle" size="16" wx:if="{{item.checked}}"></icon>
                                 </view>
-                                <view class="list__btn--delete" data-list="demand" data-addressid="{{item.id}}" data-index="{{index}}" bindtap="delItem">删除</view> 
-                            </label>
+                                <view class="weui-cell__bd list__item">
+                                    <navigator class="list__content list__content--professor" url="/pages/p-detail/p-detail?id={{item.id}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-list="demand" data-index="{{index}}" >
+                                        <view class="list__img"><image src="{{item.img}}" mode="aspectFit"></image></view>
+                                        <view class="list__text list__text--professor-item">
+                                            <view class="list__title list__title--professor">{{item.name}} {{item.college}} {{item.professionalTitle}}</view>
+                                            <text class="list__subtext">方向：{{item.direction}}</text>
+                                            <text class="list__subtext">行业：{{item.field}}</text>
+                                            <view class="list__money">￥{{item.money}}</view>
+                                        </view>
+                                    </navigator>  
+                                </view>  
+                            </view>
+                            <view class="list__btn--delete" data-list="demand" data-addressid="{{item.id}}" data-index="{{index}}" bindtap="delItem">删除</view> 
+                        </label>
                     </checkbox-group>
                     <!-- 专家约见 -->
                     <view class="y-title y-title--commenting">
@@ -114,25 +114,25 @@
                     </view>
                     <checkbox-group class="y-list" data-list="professor" bindchange="checkboxChange">
                         <label class="weui-cell weui-check__label" wx:for="{{listProfessor}}" wx:key="{{item.id}}">
-                                <view class="y-list__left" style="{{item.txtStyle}}">
-                                    <checkbox class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
-                                    <view class="weui-cell__hd weui-check__hd_in-checkbox">
-                                        <icon class="weui-icon-checkbox_success" type="success_no_circle" size="16" wx:if="{{item.checked}}"></icon>
-                                    </view>
-                                    <view class="weui-cell__bd list__item">
-                                        <view class="list__content list__content--professor"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-list="professor" data-index="{{index}}" >
-                                            <view class="list__img"><image src="{{item.img}}" mode="aspectFit"></image></view>
-                                            <view class="list__text list__text--professor-item">
-                                                <view class="list__title list__title--professor">{{item.name}} {{item.college}} {{item.professionalTitle}}</view>
-                                                <text class="list__subtext">方向：{{item.direction}}</text>
-                                                <text class="list__subtext">行业：{{item.field}}</text>
-                                                <view class="list__money">￥{{item.money}}</view>
-                                            </view>
-                                        </view>  
-                                    </view>  
+                            <view class="y-list__left" style="{{item.txtStyle}}">
+                                <checkbox class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
+                                <view class="weui-cell__hd weui-check__hd_in-checkbox">
+                                    <icon class="weui-icon-checkbox_success" type="success_no_circle" size="16" wx:if="{{item.checked}}"></icon>
                                 </view>
-                                <view class="list__btn--delete" data-list="professor" data-addressid="{{item.id}}" data-index="{{index}}" bindtap="delItem">删除</view> 
-                            </label>
+                                <view class="weui-cell__bd list__item">
+                                    <navigator url="/pages/p-detail/p-detail?id={{item.id}}" class="list__content list__content--professor"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-list="professor" data-index="{{index}}" >
+                                        <view class="list__img"><image src="{{item.img}}" mode="aspectFit"></image></view>
+                                        <view class="list__text list__text--professor-item">
+                                            <view class="list__title list__title--professor">{{item.name}} {{item.college}} {{item.professionalTitle}}</view>
+                                            <text class="list__subtext">方向：{{item.direction}}</text>
+                                            <text class="list__subtext">行业：{{item.field}}</text>
+                                            <view class="list__money">￥{{item.money}}</view>
+                                        </view>
+                                    </navigator>  
+                                </view>  
+                            </view>
+                            <view class="list__btn--delete" data-list="professor" data-addressid="{{item.id}}" data-index="{{index}}" bindtap="delItem">删除</view> 
+                        </label>
                     </checkbox-group>
                     <view class="y-account">
                         <checkbox-group bindchange="checkAllChange">
@@ -156,17 +156,27 @@
                 <view class="y-title">
                     <text>今日行程</text>
                 </view>
-                <view class="y-list">
+                <view class="y-list" wx:if="{{roleId===1}}">
                     <block wx:for="{{commentingList}}" wx:key="{{item.id}}">
-                        <template is="commentingItem" data="{{...item}}"></template>
+                        <template is="commentingItemP" data="{{...item}}"></template>
+                    </block>
+                </view>
+                <view class="y-list" wx:else>
+                    <block wx:for="{{commentingList}}" wx:key="{{item.id}}">
+                        <template is="commentingItemC" data="{{...item}}"></template>
                     </block>
                 </view>
                 <view class="y-title">
                     <text>之后行程</text>
                 </view>
-                <view class="y-list">
+                <view class="y-list" wx:if="{{roleId===1}}">
                     <block wx:for="{{commentingList}}" wx:key="{{item.id}}">
-                        <template is="commentingItem" data="{{...item}}"></template>
+                        <template is="commentingItemP" data="{{...item}}"></template>
+                    </block>
+                </view>
+                <view class="y-list" wx:else>
+                    <block wx:for="{{commentingList}}" wx:key="{{item.id}}">
+                        <template is="commentingItemC" data="{{...item}}"></template>
                     </block>
                 </view>
             </view>
@@ -181,9 +191,14 @@
                         <view class="y-commenting__filtrate y-commenting__filtrate--drop" data-filtrate="money" bindtap="filtrate" wx:if="{{money ==='drop' }}">金额</view>
                         <view class="y-commenting__filtrate" data-filtrate="money" bindtap="filtrate" wx:if="{{money !=='drop' && money!=='litre' }}">金额</view>
                     </view>
-                    <view class="y-list">
+                    <view class="y-list" wx:if="{{roleId===1}}">
                         <block wx:for="{{commentedList}}" wx:key="{{item.id}}">
-                            <template is="commentedItem" data="{{...item}}"></template>
+                            <template is="commentedItemP" data="{{...item}}"></template>
+                        </block>
+                    </view>
+                    <view class="y-list" wx:else>
+                        <block wx:for="{{commentedList}}" wx:key="{{item.id}}">
+                            <template is="commentedItemC" data="{{...item}}"></template>
                         </block>
                     </view>
                 </view>

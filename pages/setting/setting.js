@@ -1,11 +1,11 @@
 // pages/setting/setting.js
+var app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        roleId: 2,
         edit: false,
         settingList: [
             {
@@ -50,6 +50,48 @@ Page({
                 icon: '../../images/icon-setting_1.png',
                 tip: '3'
             }
+        ],
+        list: [
+            {
+                title: '公司名称',
+                name: 'companyName',
+                value: '武汉麦达电子'
+            },
+            {
+                title: '公司税号',
+                name: 'dutyParagraph',
+                value: '123456789'
+            },
+            {
+                title: '公司地址',
+                name: 'address',
+                value: '武大科技园'
+            },
+            {
+                title: '开户银行',
+                name: 'bank',
+                value: '工商银行'
+            },
+            {
+                title: '银行账号',
+                name: 'bankNo',
+                value: '123456'
+            },
+            {
+                title: '收票地址',
+                name: 'invoiceAddress',
+                value: '武大科技园'
+            },
+            {
+                title: '收票人',
+                name: 'name',
+                value: '周小伟'
+            },
+            {
+                title: '电话',
+                name: 'phone',
+                value: '15454545454'
+            }
         ]
     },
     editBtn: function () {
@@ -69,7 +111,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
+        
     },
 
     /**
@@ -83,7 +125,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.setData({
+            roleId: app.globalData.roleId
+        })
     },
 
     /**

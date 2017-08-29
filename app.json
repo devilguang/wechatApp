@@ -1,6 +1,5 @@
 {
     "pages": [  
-        "pages/linkman/linkman",
         "pages/index/index",
         "pages/recommend/recommend",
         "pages/commenting/commenting",
@@ -26,7 +25,7 @@
         "pages/d-detail/d-detail",
         "pages/c-detail/c-detail",
         
-        
+        "pages/linkman/linkman",
         "pages/collect/collect",
         "pages/setting/setting",
         

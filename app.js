@@ -18,11 +18,18 @@ App({
             })
         }
 
+        wx.getSystemInfo({
+            success: function (res) { 
+                console.log(res)
+            }
+        })
     },
 
     globalData: {
-        userInfo: null
+        userInfo: null,
+        roleId: 2   //角色：1为专家，2为企业
     },
+
     func: {
         req: http.req,
         collect: publicFun.collect,

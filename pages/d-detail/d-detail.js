@@ -23,13 +23,13 @@ Page({
     // 预约
     appointment: function (e) {
         let obj = e.currentTarget.dataset.obj
-        console.log(obj)
+        console.log(obj, 2)
         app.func.appointment(obj, 3);//调用全局预约方法
     },
     // 收藏
     collect: function (e) {
         let obj = e.currentTarget.dataset.obj
-        
+
         app.func.collect(obj, 3);//调用全局收藏方法
 
         let detail = this.data.demandDetail
@@ -38,7 +38,7 @@ Page({
                 detail[key] = !detail[key]
             }
         }
-        
+
         this.setData({
             demandDetail: detail
         })

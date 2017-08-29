@@ -77,7 +77,7 @@ page, .page, .page__bd {
 }
 
 .weui-tab__content {
-     padding-top: 0; 
+    padding-top: 0;
     /* padding-top: 10rpx; */
 }
 
@@ -86,26 +86,27 @@ page, .page, .page__bd {
 }
 
 .weui-navbar__slider {
-    width:96px;
+    width: 96px;
     height: 4rpx;
     background-color: #3982e8;
 }
 
 /* list */
-.y-list, .y-list--center{
+
+.y-list, .y-list--center {
     background-color: #fff;
 }
 
- .y-list--center {
+.y-list--center {
     position: relative;
     z-index: 9;
-} 
+}
 
 .y-list + .y-title {
     border-top: 20rpx solid #e8e8ed;
 }
 
-.mark{
+.mark {
     position: fixed;
     top: 80rpx;
     width: 100%;
@@ -134,7 +135,7 @@ button[type="primary"] {
     position: fixed;
     bottom: 0;
     width: 100%;
-    border-top:20rpx solid #fff;
+    border-top: 20rpx solid #fff;
     border-radius: 0;
     font-size: 32rpx;
 }
@@ -278,7 +279,7 @@ button.y-detail__collect::after {
     font-size: 26rpx;
 }
 
-.y-detail__text view{
+.y-detail__text view {
     display: flex;
     justify-content: flex-start;
 }
@@ -289,7 +290,7 @@ button.y-detail__collect::after {
     font-weight: 700;
 }
 
-.y-detail__text--left + text{
+.y-detail__text--left + text {
     max-width: 70%;
 }
 
@@ -403,7 +404,7 @@ button.y-detail__collect::after {
     box-sizing: border-box;
 }
 
-.field-list .weui-cell__bd{
+.field-list .weui-cell__bd {
     margin-left: 60rpx;
     margin-top: -60rpx;
 }
@@ -416,8 +417,8 @@ button.y-detail__collect::after {
     display: none;
 }
 
-
 /* y-professor */
+
 .y-professor {
     padding-bottom: 50px;
 }
@@ -461,7 +462,7 @@ button.y-detail__collect::after {
 }
 
 .y-professor__text button[size="mini"] {
-    padding:0 20rpx;
+    padding: 0 20rpx;
     line-height: 52rpx;
 }
 
@@ -480,7 +481,7 @@ button.y-detail__collect::after {
     font-size: 36rpx;
 }
 
-.y-professor__text--list .y-professor__name{
+.y-professor__text--list .y-professor__name {
     position: relative;
     top: -40rpx;
 }

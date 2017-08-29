@@ -27,7 +27,12 @@
                 <view class="weui-cell__ft weui-cell__ft_in-access">更多</view>
             </navigator>
         </view>
-        <template is="homeCommenting" data="{{...commenting}}"></template>
+         <block wx:if="{{roleId===1}}">
+            <template is="homeCommentingP" data="{{...commenting}}"></template>
+        </block>
+        <block wx:else>
+            <template is="homeCommentingC" data="{{...commenting}}"></template>
+        </block> 
     </view>
     <!-- 政策资讯/智库tab -->
     <view class="page__bd">

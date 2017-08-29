@@ -48,6 +48,7 @@ Page({
     // 预约
     appointment: function (e) {
         let obj = e.currentTarget.dataset.obj
+        console.log(obj, 2)
         app.func.appointment(obj, 2);//调用全局预约方法
     },
     // 收藏

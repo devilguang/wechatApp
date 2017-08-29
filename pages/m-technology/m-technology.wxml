@@ -7,7 +7,7 @@
     </view>
     <view class="y-list">
         <block wx:for="{{list}}" wx:key="{{item.id}}">
-            <template is="mItem" data="{{...item}}"></template>
+            <template is="mTItem" data="{{...item}}"></template>
         </block>
     </view>
     <view class="y-title">
@@ -15,7 +15,7 @@
     </view>
     <view class="y-list">
         <block wx:for="{{soldOutList}}" wx:key="{{item.id}}">
-            <template is="mItem" data="{{...item}}"></template>
+            <template is="mTItem" data="{{...item}}"></template>
         </block>
     </view>
 </view>

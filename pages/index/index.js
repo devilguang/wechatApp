@@ -29,7 +29,6 @@ Page({
             contactName: '周小伟',
             contactPostion: '人事经理',
             "type": 0,
-            roleId: 1,
             phone: '15454545454',
             time: '8月31日 星期四 12:30',
             dateTime: '30分钟',
@@ -125,6 +124,14 @@ Page({
                     sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
                 });
             }
+        })
+        this.setData({
+            roleId: app.globalData.roleId
+        })
+    },
+    onShow: function () {
+        this.setData({
+            roleId: app.globalData.roleId
         })
     }
 })

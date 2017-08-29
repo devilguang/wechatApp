@@ -1,5 +1,4 @@
-<!-- 在模板中获取整个对象有问题，还需要处理 -->
-
+<!-- 找技术列表模板 -->
 <template name="listTItem">
     <navigator class="list__item" url="/pages/t-detail/t-detail?id={{id}}">
         <text class="list__title">{{title}}</text>
@@ -11,7 +10,7 @@
         </view>
     </navigator>
 </template>
-
+<!-- 找需求列表模板 -->
 <template name="listDItem">
     <navigator class="list__item" url="/pages/d-detail/d-detail?id={{id}}">
         <text class="list__title">{{title}}</text>
@@ -23,7 +22,7 @@
         </view>
     </navigator>
 </template>
-
+<!-- 收藏技术列表模板 -->
 <template name="collectTItem">
     <view class="list__item list__item--collect">
         <navigator class="list__title list__title--collect" url="/pages/t-detail/t-detail?id={{id}}">{{title}}</navigator>
@@ -33,14 +32,14 @@
                 <text class="list__brief list__brief--collect">{{brief}}</text>
                 <view class="list__btn">
                     <button class="weui-btn mini-btn" data-type="technology" data-id="{{id}}" bindtap="toDetail" type="primary" size="mini">查看详情</button>
-                    <button class="weui-btn mini-btn" data-obj="{{item}}" data-type="1" bindtap="appointment" type="warn" size="mini">立即联系</button>
+                    <button class="weui-btn mini-btn" data-itemId="{{itemId}}" data-appointType="{{appointType}}" data-type="1" bindtap="appointment" type="warn" size="mini">立即联系</button>
                 </view>
             </view>
             
         </view>
     </view>
 </template>
-
+<!-- 收藏需求列表模板 -->
 <template name="collectDItem">
     <view class="list__item list__item--collect">
         <navigator class="list__title list__title--collect" url="/pages/d-detail/d-detail?id={{id}}">{{title}}</navigator>
@@ -50,13 +49,13 @@
                 <text class="list__brief list__brief--collect">{{brief}}</text>
                 <view class="list__btn">
                     <button class="weui-btn mini-btn" data-type="demand" data-id="{{id}}" bindtap="toDetail" type="primary" size="mini">查看详情</button>
-                    <button class="weui-btn mini-btn" data-obj="{{item}}" data-type="3" bindtap="appointment" type="warn" size="mini">立即联系</button>
+                    <button class="weui-btn mini-btn" data-itemId="{{itemId}}" data-appointType="{{appointType}}" data-type="3" bindtap="appointment" type="warn" size="mini">立即联系</button>
                 </view>
             </view>
         </view>
     </view>
 </template>
-
+<!-- 收藏专家列表模板 -->
 <template name="collectProfessItem">
     <view open-type="navigate" class="list__item list__item--collect">
         <view class="list__content list__content--professor">
@@ -66,13 +65,13 @@
                 <text class="list__brief list__brief--professor">{{brief}}</text>
                 <view class="list__btn">
                     <button class="weui-btn mini-btn" data-type="professor" data-id="{{id}}" bindtap="toDetail"  type="primary" size="mini">查看详情</button>
-                    <button class="weui-btn mini-btn" data-obj="{{item}}" data-type="2" bindtap="appointment" type="warn" size="mini">立即联系</button>
+                    <button class="weui-btn mini-btn" data-itemId="{{itemId}}" data-appointType="{{appointType}}" data-type="2" bindtap="appointment" type="warn" size="mini">立即联系</button>
                 </view>
             </view>
         </view>
     </view>
 </template>
-
+<!-- 找专家需求列表 -->
 <template name="professItem">
     <navigator open-type="navigate" class="list__item" url="/pages/p-detail/p-detail?id={{id}}">
         <view class="list__content list__content--professor">
@@ -85,7 +84,8 @@
     </navigator>
 </template>
 
-<template name="mItem">
+<!-- 技术管理列表模板 -->
+<template name="mTItem">
     <view class="list__item list__item--manage">
         <view class="list__content list__content--manage">
             <view class="list__img list__img--manage"><image src="{{img}}" mode="aspectFit"></image></view>
@@ -93,8 +93,25 @@
                 <text class="list__title list__title--manage">{{title}}</text>
                 <text class="list__brief list__brief--manage">{{brief}}</text>
                 <view class="list__btn">
-                    <view class="y-switch" wx:if="{{bud===1}}">上架<switch checked color="#3982e8" /></view>
-                    <view class="y-switch y-switch--out" wx:else>下架<switch color="#3982e8" /></view>
+                    <view class="y-switch" wx:if="{{bud===1}}">上架<switch checked="{{bud===1}}" color="#3982e8" data-bud="{{bud}}" data-id="{{id}}" bindchange="listenerSwitch"/></view>
+                    <view class="y-switch y-switch--out" wx:else>下架<switch checked="{{bud===1}}" color="#3982e8" data-bud="{{bud}}" data-id="{{id}}" bindchange="listenerSwitch" /></view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
+
+<!-- 需求管理列表模板 -->
+<template name="mDItem">
+    <view class="list__item list__item--manage">
+        <view class="list__content list__content--manage">
+            <view class="list__img list__img--manage"><image src="{{img}}" mode="aspectFit"></image></view>
+            <view class="list__text list__text--manage">
+                <text class="list__title list__title--manage">{{title}}</text>
+                <text class="list__brief list__brief--manage">{{brief}}</text>
+                <view class="list__btn">
+                    <view class="y-switch" wx:if="{{bud===1}}">上架<switch checked="{{bud===1}}" color="#3982e8" data-bud="{{bud}}" data-id="{{id}}" bindchange="listenerSwitch"/></view>
+                    <view class="y-switch y-switch--out" wx:else>下架<switch checked="{{bud===1}}" color="#3982e8" data-bud="{{bud}}" data-id="{{id}}" bindchange="listenerSwitch"/></view>
                 </view>
             </view>
         </view>

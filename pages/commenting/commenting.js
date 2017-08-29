@@ -1,13 +1,12 @@
 // pages/commenting/commenting.js
 var sliderWidth = 96; // 需要设置slider的宽度，用于计算中间位置
-
+var app = getApp()
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-        roldId: 2, //角色：1为专家，2为企业
         tabs: ['待确认', '已确认', '已结束'],
         tabs2: ['待付款', '已确认', '已结束'],
         allItem: [{ value: '全选', checked: false }],
@@ -554,7 +553,7 @@ Page({
         } else {
             console.log('出现未知错误')
         }
-        
+
         if (Datafiltrate === 'time') {
             this.setData({
                 time: filtrate,
@@ -597,7 +596,9 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.setData({
+            roleId: app.globalData.roleId
+        })
     },
 
     /**
