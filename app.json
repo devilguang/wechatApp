@@ -1,5 +1,7 @@
 {
     "pages": [  
+        "pages/professor/professor",
+        
         "pages/index/index",
         "pages/recommend/recommend",
         "pages/commenting/commenting",
@@ -15,7 +17,6 @@
 
         "pages/technology/technology",
         "pages/demand/demand",
-        "pages/professor/professor",
         
         "pages/m-technology/m-technology",
         "pages/m-demand/m-demand",
