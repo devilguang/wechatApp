@@ -1,11 +1,10 @@
 {
     "pages": [  
-        "pages/professor/professor",
-        
         "pages/index/index",
         "pages/recommend/recommend",
         "pages/commenting/commenting",
         "pages/myself/myself",
+
 
         "pages/search/search",
         "pages/news-detail/news-detail",
@@ -15,6 +14,7 @@
         "pages/c-identification/c-identification",
         "pages/register/register",
 
+        "pages/professor/professor",
         "pages/technology/technology",
         "pages/demand/demand",
         

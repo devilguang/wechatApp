@@ -300,6 +300,7 @@ button.y-detail__collect::after {
 
 /* form */
 
+/* 
 .y-form {
     position: fixed;
     top: 0;
@@ -344,7 +345,7 @@ button.y-detail__collect::after {
 .y-search__btn--form {
     width: 20%;
     border-radius: 0 10rpx 10rpx 0;
-}
+} */
 
 .weui-check__label {
     background: #fff !important;
@@ -581,4 +582,144 @@ button.y-detail__collect::after {
 .y-professor__btn image {
     width: 36rpx;
     height: 36rpx;
+}
+
+.y-search__wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    margin: 40rpx 0 12rpx 5%;
+}
+
+.y-search__input-wrap {
+    width: 75%;
+    height: 60rpx;
+    border-radius: 30rpx;
+    background: #eee;
+}
+
+.y-search__input {
+    margin: 4rpx 54rpx 4rpx 66rpx;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.y-search__btn {
+    width: 15%;
+    padding: 0;
+    line-height: 60rpx;
+    font-size: 28rpx;
+}
+
+.y-search_btn-wrap {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.y-search_btn-wrap .weui-btn {
+    margin-right: 20rpx;
+    margin-left: 0;
+    background-color: #fff;
+}
+
+.weui-icon-search_in-box {
+    left: auto;
+    margin-top: 40rpx;
+    margin-left: 20rpx;
+}
+
+.y-search__wrap .weui-btn {
+    margin-top: 0;
+}
+
+.weui-icon-clear {
+    margin-top: 40rpx;
+    right: 24%;
+}
+
+.list-wrap .y-search__wrap{
+    margin-top: 20rpx;
+}
+
+.list-wrap .weui-icon-search_in-box,
+.list-wrap .weui-icon-clear{
+    margin-top: 22rpx;
+}
+
+.list-wrap .y-search__input-wrap{
+    height: 57rpx;
+    border: 1rpx solid #a0a0a0;
+    background-color: #fff;
+}
+
+.y-search__wrap .weui-search-bar__label{
+    top: 20rpx;
+    width: 90%;
+    height: 60rpx;
+    margin: 0 auto;
+    padding-left: 22rpx;
+    border-radius: 30rpx;
+    border: 1rpx solid #a0a0a0;
+    line-height: 48rpx;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.y-search__form{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 160rpx;
+    background: #fff;
+    z-index: 10;
+}
+
+.y-search__form + .y-list--center{
+    margin-top: 160rpx;
+}
+
+.y-list__filtrate {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 60rpx;
+    line-height: 60rpx;
+    z-index: 9;
+}
+.y-list__filtrate > view,
+.y-list__filtrate > picker{
+    width: 33.333%;
+    color: #666;
+    text-align: center;
+    font-size: 28rpx;
+}
+
+.y-list__filtrate::before, .y-list__filtrate::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1rpx;
+    background-color: #d2d2d2;
+}
+
+.y-list__filtrate::after{
+    margin-top: 58rpx;
+}
+
+.y-list__filtrate > view.y-list__total{
+    color: #3982e8;
+}
+
+.y-list__filtrate image{
+    position: relative;
+    top: 4rpx;
+    left: 6rpx;
+    width: 26rpx;
+    height: 28rpx;
 }

@@ -3,7 +3,7 @@
     <view class="y-search__wrap">
         <view class="y-search__input-wrap">
             <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-            <input type="text" class="y-search__input" placeholder="搜索" value="{{inputVal}}" auto-focus focus="{{inputShowed}}" bindinput="inputTyping" />
+            <input type="text" class="y-search__input" placeholder="请输入关键词" value="{{inputVal}}" auto-focus focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="enterSubmit" />
             <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
                 <icon type="clear" size="14"></icon>
             </view>
@@ -11,7 +11,6 @@
         <button class="weui-btn y-search__btn" type="default" bindtap="hideInput">取消</button>
     </view>
     <view class="y-search_btn-wrap">
-
         <button class="weui-btn y-search__btn" type="default">推荐</button>
         <button class="weui-btn y-search__btn" type="default">推荐</button>
         <button class="weui-btn y-search__btn" type="default">推荐</button>
@@ -19,7 +18,5 @@
         <button class="weui-btn y-search__btn" type="default">推荐</button>
         <button class="weui-btn y-search__btn" type="default">推荐</button>
         <button class="weui-btn y-search__btn" type="default">推荐</button>
-
-
     </view>
 </view>

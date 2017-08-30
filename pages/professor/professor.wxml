@@ -2,13 +2,32 @@
 <import src="../../templates/TListItem.wxml" />
 
 <view class="list-wrap">
-    <view class="y-form">
-        <view class="y-search__form">
+    <view class="y-search__form">
+        <!-- 搜索框 -->
+        <view class="y-search__wrap">
+            <view class="y-search__input-wrap">
+                <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                <input type="text" class="y-search__input" placeholder="请输入关键词" value="{{inputVal}}" auto-focus focus="{{inputShowed}}" bindinput="inputTyping" bindconfirm="enterSubmit" />
+                <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+                    <icon type="clear" size="14"></icon>
+                </view>
+                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <icon class="weui-icon-search" type="search" size="14"></icon>
+                <view class="weui-search-bar__text">请输入关键词</view>
+            </label>
+            </view>
+            <button class="weui-btn y-search__btn" hidden="{{!inputShowed}}" type="default" bindtap="hideInput">取消</button>
+        </view>
+        <!-- 筛选 -->
+        <view class="y-list__filtrate">
+            <view class="y-list__total">综合</view>
             <picker class="y-search__addr" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
                 <text>{{addr}}</text>
+                <image src="../../images/icon-search_1.png"></image>
             </picker>
-            <view class="y-search__field" bindtap="showCheckBox">{{fieldStr}}</view>
-            <button class="y-search__btn--form" type="primary" size="mini">搜索</button>
+            <view class="y-list__btn" bindtap="showCheckBox">筛选
+                <image src="../../images/icon-search_2.png"></image>
+            </view>
         </view>
     </view>
     <view class="y-list--center">

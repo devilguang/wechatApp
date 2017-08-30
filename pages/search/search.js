@@ -30,7 +30,10 @@ Page({
             inputVal: e.detail.value
         });
     },
-
+    // 回车键提交表单
+    enterSubmit:function(e){
+        console.log(e.detail.value)
+    },
     /**
      * 生命周期函数--监听页面加载
      */
