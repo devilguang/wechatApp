@@ -49,3 +49,10 @@ button[size="mini"]{
 button::after{
     border: none;
 }
+
+ .login__bd .weui-navbar{
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-top: 62rpx;
+} 

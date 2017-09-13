@@ -1,5 +1,5 @@
 <!--pages/login/login.wxml-->
-<view class="page__bd">
+<view class="page__bd login__bd">
     <view class="weui-tab">
         <view class="weui-navbar">
             <block wx:for="{{tabs}}" wx:key="*this">
