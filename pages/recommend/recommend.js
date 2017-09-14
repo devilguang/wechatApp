@@ -70,7 +70,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+      let that = this
+      app.func.req('/recommend/list', 'GET', {
+          pageIndex: val,
+          pageSize: 10
+      }, function (res) {
+          that.setData({
+              id: res.data.user.id
+          });
+          console.log(res)
+          that.toLogin()
+      });
   },
 
   /**

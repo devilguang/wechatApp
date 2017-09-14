@@ -96,8 +96,7 @@ Page({
         var that = this
         // 判断是否登录
         try {
-            var value = wx.getStorageSync('key')
-            if (value) {
+            if (app.globalData.userData) {
                 // Do something with return value
             } else {
                 wx.redirectTo({

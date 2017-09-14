@@ -11,43 +11,53 @@ Page({
         tabs: ['邀请码登录', '账号登录'],
         activeIndex: 0,
         sliderOffset: 0,
-        sliderLeft: 0,
-        code: null
+        sliderLeft: 0
     },
     // 账号登录
     formSubmit: function (e) {
-        console.log(e.detail.value);
+        let that = this
         app.func.req('/user/login', 'POST', {
             "loginName": e.detail.value.loginName,
             "password": e.detail.value.password
         }, function (res) {
-            console.log(res)
-            that.toLogin()
+            if (res.errno === 0) {
+                app.globalData.userData = res.data;
+                app.globalData.roleId = res.data.user.roleId;
+                that.toLogin()
+            } else {
+                console.log(res.message)
+            }
         });
     },
     // 邀请码登录
     formSubmitCode: function (e) {
-        console.log(e.detail.value);
-
         let that = this
         app.func.req('/user/loginCode/' + e.detail.value.code, 'POST', {}, function (res) {
-            that.setData({
-                code: res.errno
-            });
             console.log(res)
-            that.toLogin()
+            if (res.errno === 0) {
+                app.globalData.userData = res.data;
+                app.globalData.roleId = res.data.user.roleId;
+                that.toLogin()
+            } else {
+                console.log(res.message)
+            }
         });
 
     },
+    // 登录成功跳转
     toLogin: function () {
-        if (this.data.code === 0) {
-            try {
-                wx.setStorageSync('key', code)
-            } catch (e) {
-            }
+        let userData = app.globalData.userData
+        if (userData) {
             wx.switchTab({
                 url: '/pages/index/index'
             })
+            app.func.req('/wechat/bindWechat', 'POST', {
+                userId: userData.user.id,
+                openId: app.globalData.openId
+            }, function (res) {
+                console.log(res)
+            });
+
         }
     },
     tabClick: function (e) {
