@@ -96,7 +96,7 @@ Page({
         var that = this
         // 判断是否登录
         try {
-            if (app.globalData.userData) {
+            if (app.globalData.userData && app.globalData.userData !== null) {
                 // Do something with return value
             } else {
                 wx.redirectTo({
@@ -124,11 +124,6 @@ Page({
                 });
             }
         })
-        this.setData({
-            roleId: app.globalData.roleId
-        })
-    },
-    onShow: function () {
         this.setData({
             roleId: app.globalData.roleId
         })
